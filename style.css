@@ -1,3 +1,78 @@
-body {
-  font-size: 20px;
+/* universal selector - to set default properties for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  color: #333;
+}
+/* setting the font-size and removing text decorations such as underline for the content in li, a and button tags*/
+li,
+a,
+button {
+  text-decoration: none;
+  font-size: 1rem; /* this will set the font size to 1*root element font size which by default is 16px */
+}
+/* the rem unit will enhance the eccessibility for the users who have changed their default fonts to higher or lower size*/
+
+.page1 {
+  height: 100vh;
+}
+/* making the header a flexbox, to arrange the nav-links, logo, and donate button in a proper format */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 8vw; /* setting the top&bottom padding to 30px; left&right padding to 8vh will ensure that it is always 8% of the viewport width enabling 8% padding throughtout all devices*/
+}
+/* setting the logo width and enabling the pointer property of cursor function*/
+.logo {
+  width: 240px;
+  margin-right: auto;
+  cursor: pointer;
+}
+header ul li a {
+  padding: 5px 10px;
+}
+/* changing the list style from column to row by using inline property */
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+.nav-links li a {
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+/* .nav-links li a:hover {
+  color: #ffffff;
+  background-color: #333; 
+}*/
+.nav-links li a::after {
+  content: "";
+  height: 3px;
+  width: 50%;
+  background: #009698;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  transition: 0.5s;
+}
+.nav-links li a:hover::after {
+  width: 100%;
+}
+/* setting the donation button functions to highlight it on the page */
+button {
+  padding: 12px 30px;
+  margin-left: 20px; /*setting a 20px margin to the left of button to maintain the total space of 40px between the nav-links and button */
+  background-color: rgba(0, 186, 224, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-weight: 1000;
+}
+/* setting the hover function to give basic colour-changing animation effect */
+button:hover {
+  background-color: #333;
+  color: #ffffff;
 }
