@@ -1,252 +1,81 @@
+/* ###################################
+      ----- DECLARING PRESETS -----
+################################### */
+/* using root-selector to declare the variable for the root element i.e. HTML doc in this case */
+:root {
+  --bgcolor: #f6f5f5;
+  --accentcolor1: #3a4b40;
+  --accentcolor2: #4d595c;
+  --accentcolor3: #a0aea5;
+  --darkcolor1: #333;
+}
 /* universal selector - to set default properties for all elements */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Barlow", sans-serif;
-  color: #333;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+  color: var(--darkcolor1);
 }
-:root {
-  --border-size: 1px;
+a {
+  text-decoration: none;
+  color: var(--darkcolor1);
 }
+/* ##############################
+      ----- FONTS -----
+############################## */
 h1 {
   font-family: "Mint Grotesk Trial Black Display";
+  font-size: 4.5rem;
+  font-weight: 400;
 }
 h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 3rem;
+  font-weight: 400;
+}
+h3 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+h4 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 2rem;
+  font-weight: 400;
+}
+h5 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+h6 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 1rem;
+  font-weight: 400;
 }
 p {
   font-family: "Comfortaa", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
-.quote {
+#quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#satisfy-regular {
   font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
-/* setting the font-size and removing text decorations such as underline for the content in li, a and button tags*/
-li,
-a,
-button {
-  text-decoration: none;
-  font-size: 1rem; /* this will set the font size to 1*root element font size which by default is 16px */
+#barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* the rem unit will enhance the eccessibility for the users who have changed their default fonts to higher or lower size*/
-
-.page1 {
+#page1 {
+  width: 100svw;
   height: 100svh;
-}
-.bg-img {
-  width: 100vw;
-  height: 60vh;
-  background-image: url(../../BGimages/raquel-pedrotti-hB-Vwbyxr9U-unsplash.jpg);
-  background-size: cover;
-}
-/* making the header a flexbox, to arrange the nav-links, logo, and donate button in a proper format */
-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 4vw;
-  padding: 3vh 5vw; /* setting the top&bottom padding to 30px; left&right padding to 8vh will ensure that it is always 8% of the viewport width enabling 8% padding throughtout all devices*/
-  /* border-bottom: 2px solid #333; */
-  backdrop-filter: blur(5px);
-  position: sticky;
-}
-
-/* setting the logo width and enabling the pointer property of cursor function*/
-.logo {
-  width: 280px;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-header ul li a {
-  padding: 5px 10px;
-}
-nav {
-  padding: 12px 8px;
-  align-content: flex-end;
-  /*online*/
-  /* background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.37);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.18); */
-}
-/* changing the list style from column to row by using inline property */
-.nav-links li {
-  display: inline-block;
-  padding: 0 20px;
-}
-.nav-links li a {
-  border: none;
-  border-radius: 50px;
-  transition: all 0.3s ease 0s;
-}
-/* .nav-btn {
-  width: 6rem;
-  height: 2rem;
-  font-size: 0.85rem;
-  color: #333;
-  font-weight: 1000;
-  cursor: pointer;
-  position: relative;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: transparent;
-} */
-.nav-btn {
-  font-size: 1.02rem;
-  color: #333;
-  /* font-weight: 1000; */
-  cursor: pointer;
-  position: relative;
-  border: none;
-  background: none;
-  /* text-transform: uppercase; */
-  /* transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); */
-  transition: all ease-in-out 300ms;
-  /* transition-duration: 400ms;
-  transition-property: color; */
-}
-.nav-btn::after {
-  content: "";
-  pointer-events: none;
-  bottom: -5px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #333;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 500ms;
-  transition-property: width, left;
-}
-
-.nav-btn:focus,
-.nav-btn:hover {
-  color: rgba(0, 186, 224, 1);
-  transform: translateY(-3px);
-  scale: 1.035;
-}
-
-.nav-btn:focus::after,
-.nav-btn:hover::after {
-  width: 100%;
-  left: 0%;
-}
-
-/* setting the donation button functions to highlight it on the page */
-.donate-btn {
-  padding: 10px 30px;
-  margin-left: 20px; /*setting a 20px margin to the left of button to maintain the total space of 40px between the nav-links and button */
-  background-color: rgba(0, 186, 224, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out 0.1s;
-  font-weight: 1000;
-}
-.donate-btn:hover,
-.donate-btn:focus {
-  color: #fff;
-  background-color: #333;
-}
-.donate-bor {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.donate-bor::before {
-  content: "";
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: none;
-  border-radius: 50px;
-  z-index: -1;
-  margin-left: 20px;
-  transition: all 0.3s ease-in-out 0.1s;
-}
-
-.donate-bor:hover::before,
-.donate-bor:focus::before {
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border: var(--border-size) solid #333;
-}
-/* online code */
-.slider-wrapper {
-  position: relative;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-}
-
-.slider {
-  --slide-width: clamp(320px, 100vw, 100vw);
-  --slide-height: clamp(240px, 100vh, 50vh);
-
-  display: grid;
-  grid-auto-flow: column;
-  scroll-snap-type: x mandatory;
-  max-width: var(--slide-width);
-  /* border: 5px solid #fff; */
-  box-shadow: 0 2px 15px rgba(#000, 0.2), 0 2px 20px rgba(#000, 0.25);
-  overflow-y: hidden;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slide {
-  scroll-snap-align: start;
-  width: var(--slide-width);
-  height: var(--slide-height);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slider-wrapper .dots {
-  /* height: 24px; */
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 15px;
-  /* z-index: 1; */
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.dots {
-  background-color: rgba(255, 255, 255, 0.3);
-
-  backdrop-filter: blur(5px);
-  padding: 5px 12px;
-  border-radius: 50px;
-}
-.dots a {
-  --dots-size: 0.7rem;
-  width: var(--dots-size);
-  height: var(--dots-size);
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.75);
-  /* opacity: 0.75; */
-  transition: opacity ease 250ms;
-  cursor: pointer;
-}
-.dots a:hover,
-.dots a:focus {
-  background-color: rgba(255, 255, 255, 1);
 }
