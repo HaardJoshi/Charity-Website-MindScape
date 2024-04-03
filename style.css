@@ -83,19 +83,66 @@ p {
 /* ##############################
       ----- SLIDER -----
 ############################## */
-.hero-img {
+header {
   display: flex;
+  /* align-items: center; */
+  height: calc(100svh - 4svh);
+  justify-content: space-between;
+}
+.hero-quote {
+  display: inline-flex;
+  flex-direction: column;
   width: 45svw;
+  height: 80vh;
+  margin: 3vh 2vw 3vh 5vw;
+  padding-top: 15vh;
+}
+.hero-img {
+  width: 45svw;
+  margin: 3vh 0 3vh 2vw;
   height: calc(100svh - 4svh);
   background-image: url(/MindScape-Documents/Pics/hero-image1.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  float: right;
 }
-.hero-quote {
-  display: flex;
-  height: calc((100svh - 4svh) / 2);
-  margin: 3vh 5vw;
-  padding: 0 1.25rem 1.5rem 0;
+.hero-links {
+  display: inline-flex;
+  justify-content: center;
+}
+.hero-btn {
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.625rem 1rem;
+  color: var(--accentcolor1);
+  background-color: transparent;
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+span {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: var(--accentcolor1);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.hero-btn:hover {
+  color: var(--bgcolor);
+  /* background-color: var(--accentcolor1); */
+  font-weight: 500;
+  border: 2px solid;
+  border-color: rgba(160, 174, 165, 0);
+}
+.hero-btn:hover span {
+  width: 100%;
 }
