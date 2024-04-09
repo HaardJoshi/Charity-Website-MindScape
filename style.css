@@ -8,7 +8,7 @@
   --accentcolor2: #4d595c;
   --accentcolor3: #a0aea5;
   --darkcolor1: #333;
-  background-color: rgba(160, 174, 165, 0.3);
+  background-color: var(--bgcolor);
 }
 /* universal selector - to set default properties for all elements */
 * {
@@ -79,6 +79,7 @@ p {
 #page1 {
   width: 100svw;
   height: calc(100svh - 5vh - 3.5vw);
+  background-color: var(--bgcolor);
 }
 #page2 {
   width: 100svw;
@@ -115,7 +116,6 @@ header {
 .hero-img {
   width: 45svw;
   margin: 0 0 3vh 2vw;
-  /* height: calc(100svh - 4svh); */
   height: calc(100svh - 5vh - 3.5vw);
   background-image: url(/MindScape-Documents/Pics/hero-image1.webp);
   background-size: cover;
@@ -140,13 +140,14 @@ header {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease-in-out 0.1s;
+  z-index: 1;
 }
 span {
   top: 0;
   left: 0;
-  position: absolute;
   width: 0%;
   height: 100%;
+  position: absolute;
   border-radius: 50px;
   background-color: var(--accentcolor1);
   z-index: -1;
@@ -154,10 +155,10 @@ span {
 }
 .hero-btn:hover {
   color: var(--bgcolor);
-  /* background-color: var(--accentcolor1); */
+  background-color: transparent;
   font-weight: 500;
   border: 2px solid;
-  border-color: rgba(160, 174, 165, 0);
+  border-color: rgba(58, 75, 64, 0);
 }
 .hero-btn:hover span {
   width: 100%;
