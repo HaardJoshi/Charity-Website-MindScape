@@ -78,29 +78,45 @@ p {
 
 #page1 {
   width: 100svw;
+  height: calc(100svh - 5vh - 3.5vw);
+}
+#page2 {
+  width: 100svw;
+  height: 100svh;
+  background-color: var(--accentcolor3);
+}
+#page3 {
+  width: 100svw;
+  height: 60svh;
+  background-color: #333;
+}
+#page4 {
+  width: 100svw;
   height: 100svh;
 }
 /* ##############################
-      ----- SLIDER -----
+      ----- PAGE-1 -----
 ############################## */
 header {
   display: flex;
   /* align-items: center; */
-  height: calc(100svh - 4svh);
+  height: calc(100svh - 5vh - 3.5vw);
   justify-content: space-between;
 }
 .hero-quote {
   display: inline-flex;
   flex-direction: column;
   width: 45svw;
-  height: 80vh;
-  margin: 3vh 2vw 3vh 5vw;
-  padding-top: 15vh;
+  /* height: 80vh; */
+  height: calc(100svh - 5vh - 3.5vw);
+  margin: 0 2vw 3vh 5vw;
+  padding-top: 10vh;
 }
 .hero-img {
   width: 45svw;
-  margin: 3vh 0 3vh 2vw;
-  height: calc(100svh - 4svh);
+  margin: 0 0 3vh 2vw;
+  /* height: calc(100svh - 4svh); */
+  height: calc(100svh - 5vh - 3.5vw);
   background-image: url(/MindScape-Documents/Pics/hero-image1.webp);
   background-size: cover;
   background-position: center;
