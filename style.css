@@ -84,23 +84,48 @@ p {
 #page2 {
   width: 100svw;
   height: 100svh;
-  background-color: var(--accentcolor3);
+  /* background-color: var(--accentcolor3); */
+  display: flex;
 }
-#page3 {
+#page4 {
   width: 100svw;
   height: 60svh;
   background-color: #333;
 }
-#page4 {
-  width: 100svw;
-  height: 100svh;
+.tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+.button-contrast1 {
+  font-size: 1.25rem;
+  font-family: Mint Grotesk Trial Black Display;
+  font-size: 0.975rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.625rem 1rem;
+  color: var(--accentcolor1);
+  /* background-color: var(--accentcolor3); */
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0.1s;
+  z-index: 1;
+  box-shadow: 20px 20px 50px 5px var(--accentcolor3) inset;
+}
+.button-contrast1:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: var(--darkcolor1);
+  box-shadow: none;
 }
 /* ##############################
       ----- PAGE-1 -----
 ############################## */
-header {
+#page1 header {
   display: flex;
-  /* align-items: center; */
   height: calc(100svh - 5vh - 3.5vw);
   justify-content: space-between;
 }
@@ -108,7 +133,6 @@ header {
   display: inline-flex;
   flex-direction: column;
   width: 45svw;
-  /* height: 80vh; */
   height: calc(100svh - 5vh - 3.5vw);
   margin: 0 2vw 3vh 5vw;
   padding-top: 10vh;
@@ -128,10 +152,12 @@ header {
 }
 .hero-btn {
   font-size: 1.25rem;
+  font-family: Mint Grotesk Trial Black Display;
+  font-size: 0.975rem;
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding: 0.6875rem 1.875rem;
   margin: 0.625rem 1rem;
   color: var(--accentcolor1);
@@ -163,6 +189,54 @@ span {
 .hero-btn:hover span {
   width: 100%;
 }
+/* ##############################
+      ----- PAGE-2 -----
+############################## */
+.page2-hero-image {
+  min-width: calc(100svw - 2.5rem - 10vw);
+  max-height: 90svh;
+  padding: 5vh 1.25rem 5vh 1.25rem;
+  margin: 7vw 5vw;
+  background-image: url(/MindScape-Documents/Pics/claudia-raya-liJGb5bsVQU-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+.page2-hero-text {
+  max-width: 70svw;
+  max-height: 90svh;
+}
+/* ##############################
+      ----- PAGE-3 -----
+############################## */
+#page3 {
+  max-width: 90svw;
+  height: 100svh;
+  margin: 7vw 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page3-hero-text {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 50svw;
+  max-height: 90svh;
+  margin: 0 0 3vh 2vw;
+  /* padding-top: 10vh; */
+}
+.page3-hero-img {
+  width: 35svw;
+  margin: 0 2vw 3vh 0;
+  height: calc(90svh - 5vh - 3.5vw);
+  border-radius: 50px;
+  background-image: url(/MindScape-Documents/Pics/robert-collins-tvc5imO5pXk-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* ----- ##################################################
       Copyright 2024 Hard Joshi. Subject to the MIT license. 
 ################################################## ----- */
