@@ -75,56 +75,127 @@ p {
   font-weight: 400;
   font-style: normal;
 }
-
-#page1 {
-  width: 100svw;
-  height: calc(100svh - 5vh - 3.5vw);
-  background-color: var(--bgcolor);
-}
-#page2 {
-  width: 100svw;
-  height: 100svh;
-  /* background-color: var(--accentcolor3); */
-  display: flex;
-}
-#page4 {
-  width: 100svw;
-  height: 60svh;
-  background-color: #333;
-}
-.tint {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-}
-.button-contrast1 {
-  font-size: 1.25rem;
+/* ##############################
+      ----- BUTTONS -----
+############################## */
+.button-1 {
   font-family: Mint Grotesk Trial Black Display;
   font-size: 0.975rem;
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
   padding: 0.6875rem 1.875rem;
-  margin: 0.625rem 1rem;
+  margin: 0.46875rem 0 0.46875rem 0.46875rem;
   color: var(--accentcolor1);
-  /* background-color: var(--accentcolor3); */
+  background-color: var(--accentcolor3);
   border: 2px solid var(--accentcolor1);
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out 0.1s;
+  transition: 0.25s ease-in-out 0.1s;
   z-index: 1;
-  box-shadow: 20px 20px 50px 5px var(--accentcolor3) inset;
 }
-.button-contrast1:hover {
+.button-1:hover {
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid var(--darkcolor1);
   background-color: var(--darkcolor1);
-  box-shadow: none;
+}
+.button-2 {
+  font-family: Mint Grotesk Trial Black Display;
+  font-size: 0.975rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.46875rem 0 0.46875rem 0.46875rem;
+  color: var(--darkcolor1);
+  background-color: var(--bgcolor);
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out 0.1s;
+  z-index: 1;
+}
+.button-2:hover {
+  color: #fff;
+  border: 2px solid var(--accentcolor1);
+  background-color: var(--accentcolor1);
+}
+.button-border {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.625rem;
+}
+.button-border::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* border: none; */
+  border-radius: 50px;
+  z-index: -1;
+  transition: 0.2s ease-in-out 0.1s;
+}
+.button-border:hover::before,
+.button-border:focus::before {
+  animation: button-border-animation 250ms ease-in-out 250ms 1 both; /*shorthand for animation: name, duration, timing-function, delay, iteration-count, fill-mode*/
+}
+@keyframes button-border-animation {
+  0% {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  25% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  50% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: 1px solid var(--darkcolor1);
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  75% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: 1px solid var(--darkcolor1);
+    border-bottom: 1px solid var(--darkcolor1);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  100% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: 1px solid var(--darkcolor1);
+    border-bottom: 1px solid var(--darkcolor1);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+}
+/* ##############################
+      ----- EFFECTS -----
+############################## */
+.tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
 }
 /* ##############################
       ----- PAGE-1 -----
 ############################## */
-#page1 header {
+#page1 {
+  width: 100svw;
+  height: calc(100svh - 5vh - 3.5vw);
+  background-color: var(--bgcolor);
+}
+header {
   display: flex;
   height: calc(100svh - 5vh - 3.5vw);
   justify-content: space-between;
@@ -157,6 +228,7 @@ p {
   font-weight: 600;
   position: relative;
   overflow: hidden;
+  min-width: 9rem;
   /* text-transform: uppercase; */
   padding: 0.6875rem 1.875rem;
   margin: 0.625rem 1rem;
@@ -192,11 +264,19 @@ span {
 /* ##############################
       ----- PAGE-2 -----
 ############################## */
+#page2 {
+  min-width: 100svw;
+  min-height: 100svh;
+  margin: 2vh 0 5vh 0;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--accentcolor3); */
+  display: flex;
+}
 .page2-hero-image {
   min-width: calc(100svw - 2.5rem - 10vw);
   max-height: 90svh;
-  padding: 5vh 1.25rem 5vh 1.25rem;
-  margin: 7vw 5vw;
+  padding: 5vh 2rem;
   background-image: url(/MindScape-Documents/Pics/claudia-raya-liJGb5bsVQU-unsplash.jpg);
   background-size: cover;
   background-position: center;
@@ -208,12 +288,55 @@ span {
   max-height: 90svh;
 }
 /* ##############################
+      ----- PARTNERS-LIST -----
+############################## */
+#infobar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  max-width: 100svw;
+  max-height: 20svh;
+  margin: 2vh 5vw 10vh 5vw;
+}
+.partners-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 0.625rem;
+  width: 100svw;
+  height: 15svh;
+  border: 1px solid var(--accentcolor2);
+  border-left: none;
+  border-radius: 0 50px 50px 0;
+}
+.partners-bar h5 {
+  margin-right: auto;
+}
+.partners-bar table {
+  width: auto;
+}
+.partners-bar table td {
+  width: 10.885vw;
+  height: 12vh;
+  padding: 1.25rem;
+}
+.partners-bar table td img {
+  display: inline-flex;
+  max-width: 10rem;
+  max-height: 12vh;
+  overflow: hidden;
+}
+/* ##############################
       ----- PAGE-3 -----
 ############################## */
 #page3 {
-  max-width: 90svw;
-  height: 100svh;
-  margin: 7vw 5vw;
+  min-width: 90svw;
+  min-height: 100svh;
+  margin: 2vh 5vw 5vh 5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -224,7 +347,6 @@ span {
   max-width: 50svw;
   max-height: 90svh;
   margin: 0 0 3vh 2vw;
-  /* padding-top: 10vh; */
 }
 .page3-hero-img {
   width: 35svw;
@@ -235,6 +357,19 @@ span {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+/* ##############################
+      ----- PAGE-4 -----
+############################## */
+#page4 {
+  min-width: 100svw;
+  min-height: 60svh;
+  max-width: 90svw;
+  margin: 2vw 0 5vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
 }
 
 /* ----- ##################################################
