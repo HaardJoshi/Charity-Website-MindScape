@@ -194,6 +194,7 @@ p {
   width: 100svw;
   height: calc(100svh - 5vh - 3.5vw);
   background-color: var(--bgcolor);
+  margin: 0 0 5vh 0;
 }
 header {
   display: flex;
@@ -265,17 +266,17 @@ span {
       ----- PAGE-2 -----
 ############################## */
 #page2 {
+  display: flex;
   min-width: 100svw;
   min-height: 100svh;
   margin: 2vh 0 5vh 0;
   align-items: center;
   justify-content: center;
   /* background-color: var(--accentcolor3); */
-  display: flex;
 }
 .page2-hero-image {
   min-width: calc(100svw - 2.5rem - 10vw);
-  max-height: 90svh;
+  height: clamp(60vh, 70vh, 90svh);
   padding: 5vh 2rem;
   background-image: url(/MindScape-Documents/Pics/claudia-raya-liJGb5bsVQU-unsplash.jpg);
   background-size: cover;
@@ -297,8 +298,8 @@ span {
   align-content: center;
   justify-content: space-between;
   max-width: 100svw;
-  max-height: 20svh;
-  margin: 2vh 5vw 10vh 5vw;
+  height: 35svh;
+  margin: 2vh 5vw 5vh 5vw;
 }
 .partners-bar {
   display: flex;
@@ -311,23 +312,28 @@ span {
   height: 15svh;
   border: 1px solid var(--accentcolor2);
   border-left: none;
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 100px 100px 0;
 }
 .partners-bar h5 {
   margin-right: auto;
 }
 .partners-bar table {
   width: auto;
+  border: none;
 }
 .partners-bar table td {
   width: 10.885vw;
   height: 12vh;
   padding: 1.25rem;
+  align-content: center;
 }
 .partners-bar table td img {
   display: inline-flex;
-  max-width: 10rem;
-  max-height: 12vh;
+  object-fit: contain;
+  aspect-ratio: 120/32;
+  max-width: 8.75rem;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 /* ##############################
@@ -363,13 +369,77 @@ span {
 ############################## */
 #page4 {
   min-width: 100svw;
-  min-height: 60svh;
-  max-width: 90svw;
+  min-height: 100svh;
   margin: 2vw 0 5vw 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+}
+.title-box {
+  width: clamp(47rem, 90vw, 90svw);
+  text-align: center;
+  margin: 5rem 0 2.5rem 0;
+}
+.comparision-chart {
+  overflow-x: auto;
+  width: clamp(64.2rem, 90vw, 100svw);
+  margin: 2vw 5vw;
+  display: flex;
   justify-content: center;
-  background-color: #333;
+  /* background-color: #fff; */
+}
+.comparision-chart table {
+  border-collapse: collapse;
+}
+.table-column-1 {
+  width: clamp(1.5rem, 2.125rem, 5vw);
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--accentcolor3);
+}
+.table-column-2 {
+  width: clamp(21.875rem, 24rem, 30vw);
+  padding: 1rem 1rem 1rem 0;
+  text-align: left;
+  background-color: var(--accentcolor3);
+}
+.table-column-3 {
+  width: clamp(21.875rem, 30rem, 40vw);
+  /* width: 45vw; */
+  padding: 1rem;
+  color: #fff;
+  background-color: var(--accentcolor1);
+}
+.comparision-chart table .table-column-empty {
+  background-color: var(--bgcolor);
+  width: clamp(1rem, 1.5rem, 2vw);
+  padding: 0;
+}
+.comparision-chart table th {
+  font-size: 1.5rem;
+  font-family: "Mint Grotesk Trial Black Display";
+  max-height: 9rem;
+}
+.comparision-chart table td {
+  max-width: 37rem;
+  height: clamp(1rem, 3.25rem, 4.375rem);
+  /* padding-right: 5rem; */
+  font-size: 1.125rem;
+}
+td.table-column-1 {
+  border-top: 1px solid var(--accentcolor2);
+}
+td.table-column-2 {
+  padding-right: 4rem;
+  border-top: 1px solid var(--accentcolor2);
+}
+td.table-column-3 {
+  padding-right: 4rem;
+  border-top: 1px solid var(--accentcolor2);
+}
+td.table-column-empty {
+  border-top: 1px solid var(--accentcolor2);
 }
 
 /* ----- ##################################################
