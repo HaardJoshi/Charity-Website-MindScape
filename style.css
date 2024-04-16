@@ -593,7 +593,7 @@ footer {
   padding: 0 5vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .headnote-left {
   display: flex;
@@ -619,9 +619,6 @@ footer {
   border-radius: 10px;
   text-align: left;
 }
-.headnote-image h5:hover .headnote-zoom-image {
-  scale: 1.05;
-}
 .headnote-right {
   display: flex;
   flex-direction: row;
@@ -635,6 +632,7 @@ table.follow-us {
 }
 td.follow-us {
   display: inline-flex;
+  position: relative;
   min-width: 2rem;
   aspect-ratio: 1;
   padding: 0.75rem;
@@ -644,47 +642,31 @@ td.follow-us {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  filter: contrast(50%);
 }
 td.follow-us:hover {
   background-color: var(--accentcolor1);
 }
-@keyframes footer-animation {
-  0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(10%);
-  }
-  20% {
-    transform: translateY(20%);
-  }
-  30% {
-    transform: translateY(30%);
-  }
-  40% {
-    transform: translateY(40%);
-  }
-  50% {
-    transform: translateY(50%);
-  }
-  60% {
-    transform: translateY(60%);
-  }
-  70% {
-    transform: translateY(70%);
-  }
-  80% {
-    transform: translateY(80%);
-  }
-  90% {
-    transform: translateY(90%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
+span.follow-us {
+  content: "";
+  position: absolute;
+  top: -4.5em;
+  width: 7.7em;
+  height: 2.6em;
+  background-color: #666;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: -1;
 }
-.footnote h6 {
-  animation: footer-animation 10s ease 1ms infinite forwards forwards;
+td.follow-us:hover span.follow-us {
+  opacity: 1;
 }
 
 /* ----- ##################################################
