@@ -115,18 +115,21 @@ p {
   z-index: 1;
 }
 .button-2:hover {
-  color: #fff;
-  border: 2px solid var(--accentcolor1);
-  background-color: var(--accentcolor1);
+  color: var(--accentcolor1);
+  border: 2px solid var(--accentcolor3);
+  background-color: var(--accentcolor3);
 }
-.button-border {
+.button-border,
+.button-border2 {
   position: absolute;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0.625rem;
+  z-index: 0;
 }
-.button-border::before {
+.button-border::before,
+.button-border2::before {
   content: "";
   position: absolute;
   cursor: pointer;
@@ -134,14 +137,17 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  /* border: none; */
   border-radius: 50px;
-  z-index: -1;
+  z-index: 0;
   transition: 0.2s ease-in-out 0.1s;
 }
 .button-border:hover::before,
 .button-border:focus::before {
   animation: button-border-animation 250ms ease-in-out 250ms 1 both; /*shorthand for animation: name, duration, timing-function, delay, iteration-count, fill-mode*/
+}
+.button-border2:hover::before,
+.button-border2:focus::before {
+  animation: button-border-animation2 250ms ease-in-out 250ms 1 both;
 }
 @keyframes button-border-animation {
   0% {
@@ -180,6 +186,43 @@ p {
     border-radius: 50px 0 0 50px;
   }
 }
+@keyframes button-border-animation2 {
+  0% {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  25% {
+    border-top: 1px solid #fff;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  50% {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  75% {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  100% {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+}
 /* ##############################
       ----- EFFECTS -----
 ############################## */
@@ -191,7 +234,7 @@ p {
       ----- PAGE-1 -----
 ############################## */
 #page1 {
-  width: 100svw;
+  width: clamp(100sw, 100sw, 100sw);
   height: calc(100svh - 5vh - 3.5vw);
   background-color: var(--bgcolor);
   margin: 0 0 5vh 0;
@@ -267,8 +310,8 @@ span {
 ############################## */
 #page2 {
   display: flex;
-  min-width: 100svw;
-  min-height: 100svh;
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(100svh, 100svh, 100svh);
   margin: 2vh 0 5vh 0;
   align-items: center;
   justify-content: center;
@@ -297,7 +340,7 @@ span {
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  max-width: 100svw;
+  width: clamp(100sw, 100sw, 100sw);
   height: 35svh;
   margin: 2vh 5vw 5vh 5vw;
 }
@@ -340,8 +383,8 @@ span {
       ----- PAGE-3 -----
 ############################## */
 #page3 {
-  min-width: 90svw;
-  min-height: 100svh;
+  width: clamp(90sw, 90sw, 90sw);
+  height: clamp(100svh, 100svh, 100svh);
   margin: 2vh 5vw 5vh 5vw;
   display: flex;
   align-items: center;
@@ -354,7 +397,7 @@ span {
   max-height: 90svh;
   margin: 0 0 3vh 2vw;
 }
-.page3-hero-img {
+.page3-hero-image {
   width: 35svw;
   margin: 0 2vw 3vh 0;
   height: calc(90svh - 5vh - 3.5vw);
@@ -368,8 +411,8 @@ span {
       ----- PAGE-4 -----
 ############################## */
 #page4 {
-  min-width: 100svw;
-  min-height: 100svh;
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(100svh, 120svh, 120svh);
   margin: 2vw 0 5vw 0;
   display: flex;
   flex-direction: column;
@@ -387,44 +430,42 @@ span {
   margin: 2vw 5vw;
   display: flex;
   justify-content: center;
-  /* background-color: #fff; */
 }
 .comparision-chart table {
   border-collapse: collapse;
 }
 .table-column-1 {
-  width: clamp(1.5rem, 2.125rem, 5vw);
+  width: clamp(1.5rem, 5vw, 5vw);
   padding: 1rem;
   text-align: center;
   background-color: var(--accentcolor3);
 }
 .table-column-2 {
-  width: clamp(21.875rem, 24rem, 30vw);
+  width: clamp(21.875rem, 25vw, 30vw);
   padding: 1rem 1rem 1rem 0;
   text-align: left;
   background-color: var(--accentcolor3);
 }
 .table-column-3 {
-  width: clamp(21.875rem, 30rem, 40vw);
-  /* width: 45vw; */
+  width: clamp(21.875rem, 50vw, 50vw);
   padding: 1rem;
   color: #fff;
+  text-align: left;
   background-color: var(--accentcolor1);
 }
 .comparision-chart table .table-column-empty {
-  background-color: var(--bgcolor);
-  width: clamp(1rem, 1.5rem, 2vw);
   padding: 0;
+  width: clamp(1rem, 1.5rem, 2vw);
+  background-color: var(--bgcolor);
 }
 .comparision-chart table th {
   font-size: 1.5rem;
   font-family: "Mint Grotesk Trial Black Display";
-  max-height: 9rem;
+  max-height: 5rem;
 }
 .comparision-chart table td {
   max-width: 37rem;
   height: clamp(1rem, 3.25rem, 4.375rem);
-  /* padding-right: 5rem; */
   font-size: 1.125rem;
 }
 td.table-column-1 {
@@ -440,6 +481,210 @@ td.table-column-3 {
 }
 td.table-column-empty {
   border-top: 1px solid var(--accentcolor2);
+}
+th.table-column-1,
+th.table-column-2,
+th.table-column-3,
+th.table-column-empty {
+  padding: 2.5rem 1rem;
+}
+/* ##############################
+      ----- PAGE-5 -----
+############################## */
+#page5 {
+  display: flex;
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(100svh, 100svh, 100svh);
+  margin: 2vh 0 5vh 0;
+  align-items: center;
+  justify-content: center;
+}
+.page5-hero-image {
+  width: clamp(90vw, 90vw, 90vw);
+  height: clamp(90vh, 90vh, 90vh);
+  background-image: url(/MindScape-Documents/Pics/artur-aldyrkhanov-3bwMp-TyxOE-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.top-textbox p,
+.bottom-textbox p {
+  max-width: 40svw;
+  color: #fff;
+}
+.top-textbox {
+  margin: 5vh 5vw;
+  padding: 5vh 5vw;
+}
+.bottom-textbox {
+  margin: 5vh 5vw;
+  padding: 5vh 5vw;
+  min-height: 25vh; /*resolve the issue as to why it requires min-width to put margin and paddingin effect*/
+}
+/* ##############################
+      ----- ONE-LINER -----
+############################## */
+#one-liner {
+  display: flex;
+  flex-direction: row;
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(10svh, 10svh, 10svh);
+  margin: 2vh 5vw 5vh 5vw;
+  padding: 0 1.5rem;
+  background-color: var(--darkcolor1);
+  align-items: center;
+  border-radius: 100px;
+}
+#one-liner .button-border2 {
+  right: calc(5vw + 1rem);
+}
+/* ##############################
+      ----- PAGE-6 -----
+############################## */
+#page6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(150svh, 150svh, 150svh);
+  background-color: var(--accentcolor1);
+  align-items: center;
+}
+/* style="display: flex; flex-direction: column; align-items: center" */
+.page6-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 90svw;
+  height: clamp(35svh, 35svh, 35svh);
+  margin: 2vh 0 5vh 0;
+  padding: 0 5vw;
+}
+/* ##############################
+      ----- FOOTER -----
+############################## */
+footer {
+  display: flex;
+  flex-direction: column;
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(45svh, 45svh, 45svh);
+  /* background-color: #a0aea5; */
+  bottom: 0;
+}
+.headnote {
+  max-width: 90svw;
+  min-height: 30svh;
+  padding: 1rem 5vw;
+  margin: 2vh 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footnote {
+  max-width: 90svw;
+  height: 8svh;
+  text-align: center;
+  justify-items: center;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headnote-left {
+  display: flex;
+  flex-direction: column;
+  max-width: min(28rem, 40vw);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.headnote-left img {
+  width: 20rem;
+}
+.headnote-zoom-image {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 25rem;
+  aspect-ratio: 16/9;
+  padding: 1rem;
+  margin-top: 0.75rem;
+  background-image: url(/MindScape-Documents/Pics/larm-rmah-AEaTUnvneik-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  text-align: left;
+}
+.headnote-image h5:hover .headnote-zoom-image {
+  scale: 1.05;
+}
+.headnote-right {
+  display: flex;
+  flex-direction: row;
+  min-width: min(45rem, 50vw);
+  align-items: center;
+  justify-content: space-evenly;
+}
+table.follow-us {
+  width: calc(min(45rem, 50vw)-86.16px);
+  object-fit: fill;
+}
+td.follow-us {
+  display: inline-flex;
+  min-width: 2rem;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+  margin: 0.5rem;
+  border: 1px solid var(--accentcolor2);
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+td.follow-us:hover {
+  background-color: var(--accentcolor1);
+}
+@keyframes footer-animation {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(10%);
+  }
+  20% {
+    transform: translateY(20%);
+  }
+  30% {
+    transform: translateY(30%);
+  }
+  40% {
+    transform: translateY(40%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  60% {
+    transform: translateY(60%);
+  }
+  70% {
+    transform: translateY(70%);
+  }
+  80% {
+    transform: translateY(80%);
+  }
+  90% {
+    transform: translateY(90%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.footnote h6 {
+  animation: footer-animation 10s ease 1ms infinite forwards forwards;
 }
 
 /* ----- ##################################################
