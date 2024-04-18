@@ -128,6 +128,21 @@ p {
   margin: 0.625rem;
   z-index: 0;
 }
+.button-grid {
+  width: clamp(5.25rem, 7.25rem, 8.5rem);
+  aspect-ratio: 24/5;
+  padding: 2px 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-family: Mint Grotesk Trial Black Display;
+}
+.button-grid:hover {
+  color: var(--darkcolor1);
+  background-color: #fff;
+}
 .button-border::before,
 .button-border2::before {
   content: "";
@@ -551,11 +566,11 @@ th.table-column-empty {
   flex-direction: column;
   justify-content: flex-start;
   width: clamp(100sw, 100sw, 100sw);
-  height: clamp(150svh, 150svh, 150svh);
-  background-color: var(--accentcolor1);
+  height: clamp(120svh, 140svh, 150svh);
+  margin: 5vh 0 5vh 0;
+  background-color: #1a1a1a;
   align-items: center;
 }
-/* style="display: flex; flex-direction: column; align-items: center" */
 .page6-hero-text {
   display: flex;
   flex-direction: column;
@@ -563,8 +578,62 @@ th.table-column-empty {
   justify-content: center;
   min-width: 90svw;
   height: clamp(35svh, 35svh, 35svh);
-  margin: 2vh 0 5vh 0;
+  margin: 12vh 0 10vh 0;
   padding: 0 5vw;
+}
+.page6-body-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 90vw;
+  height: 90vw;
+  margin-bottom: 10vh;
+  inset: 1rem 0;
+}
+.grid-image {
+  grid-area: 1 / 1 / 2 / 4;
+  display: flex;
+  padding: 2.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(/MindScape-Documents/Pics/larm-rmah-AEaTUnvneik-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  border: 1.5px solid var(--darkcolor1);
+  transition: all 0.5s ease-in-out;
+}
+.grid-image:hover,
+.grid-squares:hover {
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 0.6rem #fff;
+}
+.grid-image-text h4,
+.grid-image-text p,
+.grid-squares h4,
+.grid-squares p {
+  color: #fff;
+}
+#grid-square-1 {
+  grid-area: 2/1/3/2;
+}
+#grid-square-2 {
+  grid-area: 2/1/3/3;
+}
+#grid-square-3 {
+  grid-area: 2/1/3/4;
+}
+.grid-squares {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1.5px solid var(--darkcolor1);
+  transition: all 0.5s ease-in-out;
 }
 /* ##############################
       ----- FOOTER -----
@@ -674,8 +743,8 @@ span.follow-us {
   align-items: flex-end;
   padding: 5px 10px 10px 10px;
   border: none;
-  border-radius: 5%;
-  text-shadow: 0 0 8px rgb(255, 255, 255);
+  border-radius: 5px;
+  text-shadow: 0 0 0.5rem rgb(255, 255, 255);
   opacity: 0;
   clip-path: polygon(
     15% 0,
