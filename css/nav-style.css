@@ -14,18 +14,21 @@ nav {
   top: 0;
 }
 nav .logo {
-  width: 22.5rem; /*add js to change this to 18.75 when scrolled down to 75% of page-1 */
+  /* width: 22.5rem; add js to change this to 18.75 when scrolled down to 75% of page-1 */
+  width: 22.8175vw;
   margin-right: auto;
   cursor: pointer;
   top: 0;
 }
 nav ul li a {
-  padding: 0.3125rem 0.625rem;
+  /* padding: 0.3125rem 0.625rem; */
+  padding: 0.35vw 0.69vw;
 }
 /* changing the list style from column to row by using inline property */
 .nav-links li {
   display: inline-block;
-  padding: 0 1.25rem; /*add js to change this to 0.75 when scrolled down to 75% of page-1 */
+  /* padding: 0 1.25rem; add js to change this to 0.75 when scrolled down to 75% of page-1 */
+  padding: 1.37875vw;
 }
 .nav-links li a {
   border: none;
@@ -34,6 +37,7 @@ nav ul li a {
 }
 .nav-btn {
   font-size: 1.02rem;
+  /* font-size: 1.125vw; */
   color: var(--darkcolor1);
   cursor: pointer;
   position: relative;
@@ -69,8 +73,10 @@ nav ul li a {
 
 /* setting the donation button properties to highlight it on the page */
 .donate-btn {
-  font-size: 1.02rem;
-  padding: 0.6875rem 1.875rem;
+  /* font-size: 1.02rem; */
+  font-size: 1.125vw;
+  /* padding: 0.6875rem 1.875rem; */
+  padding: 0.7485vw 2.07vw;
   margin-left: 1.25rem; /*setting a margin to the left of button to maintain the total space of 2.5rem between the nav-links and button */
   color: var(--darkcolor1);
   background-color: var(--accentcolor3);
@@ -158,6 +164,7 @@ nav ul li a {
     display: flex;
   }
 }
+
 /* ----- ##################################################
       Copyright 2024 Hard Joshi. Subject to the MIT license. 
 ################################################## ----- */
