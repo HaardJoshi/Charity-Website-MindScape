@@ -421,6 +421,10 @@ b.page-2-quote {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.1, 0.1);
+}
+td a img:hover {
+  scale: 1.25;
 }
 /* ##############################
       ----- PAGE-3 -----
@@ -797,6 +801,8 @@ td.follow-us:focus span.follow-us {
   align-items: center;
   justify-content: space-between;
 }
+/* tootltip dimenssions:
+ clip-path: polygon(0 100%, 100% 100%, 100% 25%, 62% 25%, 50% 0, 37% 25%, 0 25%); */
 
 /* ----- ##################################################
       Copyright 2024 Hard Joshi. Subject to the MIT license. 
