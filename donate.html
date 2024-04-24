@@ -86,7 +86,7 @@
       </div>
     </nav>
     <!-- DONATE PAGE CODE -->
-    <div id="donate-page">
+    <div id="donate-page-1">
       <!-- <div id="donate-grid">
         <div id="donate-hero-image">div1</div>
         <div id="donate-hero-text">div2</div>
@@ -97,9 +97,14 @@
       <div class="donate-body">
         <div class="donate-hero-text">
           <h1 style="font-size: 6rem; text-align: center">Make a donation</h1>
+          <br /><br />
           <p
-            class="barlow-regular"
-            style="font-size: 1.125rem; max-width: 50vw; text-align: center"
+            style="
+              font-size: 1.25rem;
+              max-width: 50vw;
+              text-align: center;
+              line-height: 2;
+            "
           >
             Your gift today plants the seeds of hope for a brighter tomorrow,
             one where every child can laugh, learn, and reach their full
@@ -110,65 +115,155 @@
 
         <form class="donation-form">
           <div class="donation-amount">
-            <input
-              type="radio"
-              id="amount-45"
-              name="donation-amount"
-              value="45"
-            />
-            <label for="amount-45">$45</label>
-            <input
-              type="radio"
-              id="amount-100"
-              name="donation-amount"
-              value="100"
-            />
-            <label for="amount-100">$100</label>
-            <input
-              type="radio"
-              id="amount-250"
-              name="donation-amount"
-              value="250"
-            />
-            <label for="amount-250">$250</label>
-            <input
-              type="radio"
-              id="amount-500"
-              name="donation-amount"
-              value="500"
-            />
-            <label type="radio" for="amount-500">$500</label>
-            <input
-              type="number"
-              id="amount-custom"
-              name="donation-amount"
-              value="C  USTOM"
-            />
-            <label for="amount-custom">Custom</label>
+            <label class="radio"
+              ><input type="radio" name="donation-amount" value="45" />$45
+              <span></span>
+            </label>
+            <label class="radio"
+              ><input type="radio" name="donation-amount" value="100" />$100
+              <span></span>
+            </label>
+            <label class="radio"
+              ><input type="radio" name="donation-amount" value="250" />$250
+              <span></span>
+            </label>
+            <label class="radio"
+              ><input
+                type="radio"
+                id="amount-500"
+                name="donation-amount"
+                value="500"
+              />$500
+              <span></span>
+            </label>
+            <label class="custom-amount"
+              ><input
+                type="number"
+                name="donation-amount"
+                placeholder="Custom Amount"
+                min="1"
+                max="99999"
+            /></label>
           </div>
-          <div class="donation-option">
-            <input
-              type="radio"
-              id="give-once"
-              name="donation-type"
-              value="once"
-            />
-            <label for="give-once">Give once</label>
-            <input
-              type="radio"
-              id="give-monthly"
-              name="donation-type"
-              value="monthly"
-            />
-            <label for="give-monthly">Give monthly</label>
+          <div class="donation-frequency">
+            <label class="frequency-type"
+              ><input type="radio" name="donation-type" value="once" />Give once
+              <span></span
+            ></label>
+            <label class="frequency-type"
+              ><input type="radio" name="donation-type" value="monthly" />Give
+              monthly <span></span
+            ></label>
           </div>
           <div class="donation-submit">
             <button type="submit">Continue Donation</button>
           </div>
-
-          <!-- <input type="button" value="Continue Donation" /> -->
         </form>
       </div>
     </div>
+    <div id="donate-page-2">
+      <div class="donate-grid">
+        <div class="donate-grid-hero-text">
+          <h2 style="font-size: 3rem">See your generosity in action</h2>
+        </div>
+        <div id="body-cell-1" class="donate-grid-body-text">
+          <h5 style="font-size: 1.35rem">Give toward impact</h5>
+          <br />
+          <p style="font-size: 1.05rem">
+            See the impact of your generosity directly support children's mental
+            well-being. Every donation helps us provide vital resources and
+            care.
+          </p>
+        </div>
+        <div id="body-cell-2" class="donate-grid-body-text">
+          <h5 style="font-size: 1.35rem">Spark a Ripple Effect</h5>
+          <br />
+          <p style="font-size: 1.05rem">
+            Your gift creates ripples of hope! Every donation expands our reach,
+            helping more children find the support they need to thrive.
+          </p>
+        </div>
+        <div id="body-cell-3" class="donate-grid-body-text">
+          <h5 style="font-size: 1.35rem">Receive quarterly updates</h5>
+          <br />
+          <p style="font-size: 1.05rem">
+            You’ll receive consistent updates on how your giving changes lives.
+          </p>
+        </div>
+        <div class="donate-grid-image"></div>
+      </div>
+    </div>
+    <!-- Code for footer  -->
+    <footer>
+      <section class="headnote">
+        <div class="headnote-left">
+          <img src="/MindScape-Documents/Pics/Logo-Remake2.png" alt="logo" />
+          <div class="headnote-zoom-image tint">
+            <div class="headnote-image">
+              <h5 style="color: var(--white)">
+                Let's help the children to a brighter future together.
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="headnote-right">
+          <h5>Find Us</h5>
+          <table class="follow-us">
+            <tr>
+              <td class="follow-us">
+                <a href="https://twitter.com/"
+                  ><span class="follow-us">Twitter</span
+                  ><img
+                    src="/MindScape-Documents/Pics/brand-x.svg"
+                    alt="Twitter"
+                /></a>
+              </td>
+              <td class="follow-us">
+                <a href="https://linkedin.com/"
+                  ><span class="follow-us">LinkedIn</span
+                  ><img
+                    src="/MindScape-Documents/Pics/brand-linkedin.svg"
+                    alt="LinkedIn"
+                /></a>
+              </td>
+              <td class="follow-us">
+                <a href="https://instagram.com/"
+                  ><span class="follow-us">Instagram</span
+                  ><img
+                    src="/MindScape-Documents/Pics/brand-instagram.svg"
+                    alt="Instagram"
+                /></a>
+              </td>
+              <td class="follow-us">
+                <a href="https://www.tiktok.com/"
+                  ><span class="follow-us">Ticktok</span
+                  ><img
+                    src="/MindScape-Documents/Pics/brand-tiktok.svg"
+                    alt=" TikTok"
+                /></a>
+              </td>
+              <td class="follow-us">
+                <a href="https://www.youtube.com/"
+                  ><span class="follow-us">Youtube</span
+                  ><img
+                    src="/MindScape-Documents/Pics/brand-youtube.svg"
+                    alt="Youtube"
+                /></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <hr />
+      <section class="footnote">
+        <h6 class="barlow-regular">MindScape is a Non-profit Organization.</h6>
+        <h6 class="barlow-regular">
+          Copyright © 2024
+          <a href="https://github.com/HaardJoshi" class="barlow-regular"
+            >Hard Joshi</a
+          >.
+        </h6>
+      </section>
+    </footer>
   </body>
 </html>
