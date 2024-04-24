@@ -1,0 +1,59 @@
+/* ##############################
+      ----- PAGE-1 -----
+############################## */
+#about-us-page1 {
+  min-width: 100svw;
+  max-width: 100svw;
+  height: calc(90svh - 5vh - 3.5vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact-header-text {
+  max-width: 80svw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 12vh 5vw 5vh 5vw;
+}
+/* ##############################
+      ----- PAGE-2 -----
+############################## */
+/* code for divs and elements used on sub-page-3 */
+#about-us-page2 {
+  width: clamp(90svw, 90svw, 90svw);
+  height: clamp(100svh, 100svh, 100svh);
+  /* margin-top: 5vh; */
+  padding: 5vh 5vw 5vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--darkcolor1);
+}
+.about-us-page2-hero-text {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 50svw;
+  max-height: 90svh;
+  margin: 0 2vw 3vh 0;
+}
+.about-us-page2-hero-image {
+  width: 35svw;
+  margin: 0 0 3vh 2vw;
+  height: calc(90svh - 5vh - 3.5vw);
+  border-radius: 50px;
+  background-image: url(/MindScape-Documents/Pics/pexels-mikhail-nilov-8923027.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0.75rem #fff;
+}
+.about-us-page2-hero-text span b {
+  background-color: lightgreen;
+  color: var (--darkcolor1);
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 2;
+}
