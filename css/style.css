@@ -262,7 +262,7 @@ p {
 
 /* code for divs and elements used on sub-page-1 */
 #page1 {
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(100svw, 100svw, 100svw);
   height: calc(100svh - 5vh - 3.5vw);
   background-color: var(--bgcolor);
   margin: 0 0 5vh 0;
@@ -305,9 +305,10 @@ b.page-1-quote {
   font-family: "Mint Grotesk Trial Black Display";
   font-size: 0.975rem;
   font-weight: 600;
+  text-align: center;
   position: relative;
   overflow: hidden;
-  min-width: 9rem;
+  min-width: 5rem;
   padding: 0.6875rem 1.875rem;
   margin: 0.625rem 1rem;
   color: var(--accentcolor1);
@@ -318,7 +319,26 @@ b.page-1-quote {
   transition: all 0.3s ease-in-out 0.1s;
   z-index: 1;
 }
-span {
+.hero-btn2 {
+  font-size: 1.25rem;
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 0.975rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-width: 5rem;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.625rem 1rem;
+  color: var(--white);
+  background-color: var(--accentcolor1);
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0.1s;
+  z-index: 1;
+}
+.hero-btn span {
   top: 0;
   left: 0;
   width: 0%;
@@ -327,16 +347,33 @@ span {
   border-radius: 50px;
   background-color: var(--accentcolor1);
   z-index: -1;
-  transition: all 0.3s ease-in-out 0.1s;
+  transition: all 0.3s ease-in-out 0.2s;
+}
+.hero-btn2 span {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50px;
+  background-color: var(--darkcolor1);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0.2s;
 }
 .hero-btn:hover {
   color: var(--bgcolor);
   background-color: transparent;
-  font-weight: 500;
   border: 2px solid;
   border-color: rgba(58, 75, 64, 0);
 }
-.hero-btn:hover span {
+.hero-btn2:hover {
+  color: lightgreen;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: rgba(58, 75, 64, 0);
+}
+.hero-btn:hover span,
+.hero-btn2:hover span {
   width: 100%;
 }
 /* ##############################
@@ -346,7 +383,7 @@ span {
 /* code for divs and elements used on sub-page-2 */
 #page2 {
   display: flex;
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(100svw, 100svw, 100svw);
   height: clamp(100svh, 100svh, 100svh);
   margin: 2vh 0 5vh 0;
   align-items: center;
@@ -368,8 +405,8 @@ span {
 }
 b.page-2-quote {
   background-color: palegreen;
-  font-family: "Mint Grotesk Trial Black Display";
-  font-size: 2.5rem;
+  font-family: "Satisfy", cursive;
+  font-size: 3.15rem;
   font-weight: 400;
 }
 /* ##############################
@@ -383,7 +420,7 @@ b.page-2-quote {
   align-items: center;
   align-content: center;
   justify-content: space-between;
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(90svw, 90svw, 900svw);
   height: 35svh;
   margin: 2vh 5vw 5vh 5vw;
 }
@@ -423,7 +460,7 @@ b.page-2-quote {
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.1, 0.1);
 }
-td a img:hover {
+.partners-bar td a img:hover {
   scale: 1.25;
 }
 /* ##############################
@@ -431,7 +468,7 @@ td a img:hover {
 ############################## */
 /* code for divs and elements used on sub-page-3 */
 #page3 {
-  width: clamp(90sw, 90sw, 90sw);
+  width: clamp(90svw, 90svw, 90svw);
   height: clamp(100svh, 100svh, 100svh);
   margin: 2vh 5vw 5vh 5vw;
   display: flex;
@@ -546,7 +583,7 @@ th.table-column-empty {
 /* code for divs and elements used on sub-page-5 */
 #page5 {
   display: flex;
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(100svw, 100svw, 100svw);
   height: clamp(100svh, 100svh, 100svh);
   margin: 2vh 0 5vh 0;
   align-items: center;
@@ -587,10 +624,10 @@ th.table-column-empty {
 #one-liner {
   display: flex;
   flex-direction: row;
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(85.97svw, 86svw, 90svw);
   height: clamp(10svh, 10svh, 10svh);
   margin: 2vh 5vw 5vh 5vw;
-  padding: 0 1.5rem;
+  padding: 0 2vw;
   background-color: var(--darkcolor1);
   align-items: center;
   border-radius: 100px;
@@ -607,9 +644,9 @@ th.table-column-empty {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(100svw, 100svw, 100svw);
   height: clamp(120svh, 140svh, 150svh);
-  margin: 5vh 0 5vh 0;
+  margin: 5vh 0 0 0;
   background-color: #1a1a1a;
   align-items: center;
 }
@@ -646,6 +683,9 @@ th.table-column-empty {
   border-radius: 1rem;
   border: 1.5px solid var(--darkcolor1);
   transition: all 0.5s ease-in-out;
+}
+.grid-image:hover {
+  background-size: calc(100vw);
 }
 .grid-image:hover,
 .grid-squares:hover {
@@ -685,15 +725,35 @@ th.table-column-empty {
 footer {
   display: flex;
   flex-direction: column;
-  width: clamp(100sw, 100sw, 100sw);
-  height: clamp(45svh, 45svh, 45svh);
+  width: clamp(100svw, 100svw, 100svw);
+  height: clamp(60svh, 60svh, 60svh);
   bottom: 0;
+  position: relative;
+}
+.footer-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-waves svg {
+  position: relative;
+  display: block;
+  width: 100svw;
+  height: 15vh;
+}
+
+.footer-waves .shape-fill {
+  fill: #b8e986;
 }
 .headnote {
   max-width: 90svw;
   min-height: 30svh;
   padding: 1rem 5vw;
-  margin: 2vh 0 0 0;
+  margin: 15vh 0 0 0;
   display: flex;
   justify-content: space-between;
 }
@@ -710,7 +770,7 @@ footer {
 .headnote-zoom-image {
   display: flex;
   flex-direction: column-reverse;
-  width: 25rem;
+  width: 33.59vw;
   aspect-ratio: 16/9;
   padding: 1rem;
   margin-top: 0.75rem;
@@ -761,29 +821,29 @@ td.follow-us a img {
   filter: contrast(20%);
 }
 td.follow-us:hover {
-  background-color: var(--accentcolor1);
+  background-color: var(--darkcolor1);
 }
 td.follow-us:hover img {
   filter: contrast(100%);
 }
 span.follow-us {
   content: "";
-  color: lime;
+  color: var(--darkcolor1);
   text-transform: uppercase;
   font-size: 0.85rem;
   position: absolute;
-  transform: translate(1.8125rem, 4.5rem);
+  transform: translate(1.8125rem, 3.75rem);
   width: clamp(3rem, 5rem, 7rem);
-  height: clamp(1.5rem, 1.8rem, 4rem);
-  background-color: rgba(58, 75, 64, 0.9);
+  height: clamp(1.15rem, 1.25rem, 4rem);
+  background-color: #f0f7f0;
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   border: none;
-  border-radius: 0 15px 15px 15px;
-  text-shadow: 0 0 0.5rem rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 0 0.6rem rgb(0, 0, 0);
   opacity: 0;
   transition: all 0.3s linear;
 }
@@ -801,8 +861,6 @@ td.follow-us:focus span.follow-us {
   align-items: center;
   justify-content: space-between;
 }
-/* tootltip dimenssions:
- clip-path: polygon(0 100%, 100% 100%, 100% 25%, 62% 25%, 50% 0, 37% 25%, 0 25%); */
 
 /* ----- ##################################################
       Copyright 2024 Hard Joshi. Subject to the MIT license. 
