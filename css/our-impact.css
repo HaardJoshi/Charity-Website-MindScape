@@ -1,0 +1,106 @@
+/* ##############################
+      ----- PAGE-1 -----
+############################## */
+#our-impact-page1 {
+  width: clamp(90svw, 90svw, 90svw);
+  height: calc(75svh - 5vh - 3.5vw);
+  background-image: url(/MindScape-Documents/Pics/robert-collins-tvc5imO5pXk-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5vh 5vw;
+  margin-bottom: 5vh;
+}
+.our-impact-page1-hero-image {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+/* ##############################
+      ----- PAGE-2 -----
+############################## */
+#our-impact-one-liner {
+  width: clamp(90svw, 90svw, 90svw);
+  height: 15svh;
+  margin: 7vh 5vw 0 5vw;
+  padding: 5vh 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ##############################
+      ----- PAGE-3 -----
+############################## */
+#our-impact-page2-grid {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: clamp(90svw, 90svw, 90svw);
+  height: 100vh;
+  margin: 5vh 5vw;
+}
+#impact-page2-cell1 {
+  grid-area: 1 / 1 / 4 / 2;
+  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+}
+#impact-page2-cell2 {
+  grid-area: 1/2/4/3;
+  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+}
+#impact-page2-cell3 {
+  grid-area: 4/1/5/2;
+}
+#impact-page2-cell4 {
+  grid-area: 4/2/5/3;
+}
+#impact-page2-cell5 {
+  grid-area: 5/1/8/2;
+  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+}
+#impact-page2-cell6 {
+  grid-area: 5/2/8/3;
+  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+}
+#impact-page2-cell7 {
+  grid-area: 8/1/9/2;
+}
+#impact-page2-cell8 {
+  grid-area: 8/2/9/3;
+}
+.our-impact-page2-grid-cells-large,
+.our-impact-page2-grid-cells-small {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.our-impact-page2-grid-cells-small {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+.our-impact-page2-grid-cells-small p {
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+}
+.our-impact-page2-grid-cells-small h6:hover {
+  text-decoration: underline;
+}
+.grid-line {
+  display: flex;
+  align-items: center;
+}
+.our-impact-page2-grid-cells-large {
+  border-radius: 1rem;
+  border: 2px solid var(--bgcolor);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.our-impact-page2-grid-cells-large:hover {
+  border: 2px solid #0c0c0c;
+  box-shadow: 2px 2px 0.85rem #0c0c0c;
+}
