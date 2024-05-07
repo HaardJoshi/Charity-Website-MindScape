@@ -1,0 +1,60 @@
+/* ##############################
+      ----- PAGE-1 -----
+############################## */
+#story-page1 {
+  width: clamp(100svw, 100svw, 100svw);
+  height: calc(220svh - 5vh - 3.5vw);
+
+  margin: 0 0 5vh 0;
+}
+.story-hero-image {
+  width: 100svw;
+  margin: 2vh 0;
+  height: calc(70svh - 5vh - 3.5vw);
+  background-image: url(/MindScape-Documents/Pics/pexels-gustavo-fring-3985232.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--darkcolor1);
+}
+.story-header {
+  width: clamp(90svw, 90svw, 90svw);
+  margin: 2vh 5vw 7vh 5vw;
+}
+.story-icon-line {
+  display: flex;
+  align-items: center;
+}
+.story-icon-line p {
+  font-size: 1.2rem;
+}
+.story-header hr {
+  border: none;
+  border-top: 0.15rem solid var(--darkcolor1);
+  height: 0;
+}
+.story-paragraph {
+  margin-bottom: 7vh;
+}
+.story-paragraph p {
+  font-size: 1.35rem;
+  text-align: justify;
+}
+.story-paragraph b {
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+}
+.story-quote {
+  width: clamp(90svw, 90svw, 90svw);
+  min-height: 25vh;
+  background-color: var(--accentcolor1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story-quote blockquote {
+  color: var(--white);
+  font-size: 2rem;
+  padding: 5rem;
+}
