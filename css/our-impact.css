@@ -4,7 +4,7 @@
 #our-impact-page1 {
   width: clamp(90svw, 90svw, 90svw);
   height: calc(75svh - 5vh - 3.5vw);
-  background-image: url(/MindScape-Documents/Pics/robert-collins-tvc5imO5pXk-unsplash.jpg);
+  background-image: url(../assets/our-impact-page-1-image-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,11 +45,11 @@
 }
 #impact-page2-cell1 {
   grid-area: 1 / 1 / 4 / 2;
-  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+  background-image: url(../assets/our-impact-page-3-story-image-1.jpg);
 }
 #impact-page2-cell2 {
   grid-area: 1/2/4/3;
-  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+  background-image: url(../assets/our-impact-page-3-story-image-2.jpg);
 }
 #impact-page2-cell3 {
   grid-area: 4/1/5/2;
@@ -59,11 +59,11 @@
 }
 #impact-page2-cell5 {
   grid-area: 5/1/8/2;
-  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+  background-image: url(../assets/our-impact-page-3-story-image-3.jpg);
 }
 #impact-page2-cell6 {
   grid-area: 5/2/8/3;
-  background-image: url(/MindScape-Documents/Pics/pexels-olly-3812720.jpg);
+  background-image: url(../assets/our-impact-page-3-story-image-4.jpg);
 }
 #impact-page2-cell7 {
   grid-area: 8/1/9/2;
@@ -98,7 +98,6 @@
   border-radius: 1rem;
   border: 2px solid var(--bgcolor);
   transition: all 0.4s ease-in-out;
-  cursor: pointer;
 }
 .our-impact-page2-grid-cells-large:hover {
   border: 2px solid #0c0c0c;
