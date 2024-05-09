@@ -1,43 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MindScape-Nurturing Young Minds, Building Strong Futures!</title>
-    <!-- This css sylesheet is used to style the home page and declare presets for the website to ensure uniformity -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <!-- This css sylesheet is used to style navbar -->
-    <link rel="stylesheet" type="text/css" href="nav-style.css" />
-    <!-- This image is the icon that is displayed beside the title in a web-browser -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="/MindScape-Documents/Pics/fevicon-2.png"
-    />
-    <!-- This is the link to import font Barlow  -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap"
-    />
-    <!-- This is the link to import font Mint Grotesk Trial Black Display  -->
-    <link
-      rel="stylesheet"
-      href="https://db.onlinewebfonts.com/c/03371e2a981f44333e9e50507227419d?family=Mint+Grotesk+Trial+Black+Display"
-      type="text/css"
-    />
-    <!-- This is the link to import font Quintessential  -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quintessential&family=Satisfy&display=swap"
-    />
-    <!-- This is the link to import symbols  -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-  </head>
-  <body>
-    <!-- CONSTRUCTION PAGE CODE -->
-    <div class="construction-page"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindScape-Nurturing Young Minds, Building Strong Futures!</title>
+  <!-- This css sylesheet is used to style the home page and declare presets for the website to ensure uniformity -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <!-- This css sylesheet is used to style navbar -->
+  <link rel="stylesheet" type="text/css" href="../css/nav-style.css" />
+  <!-- This image is the icon that is displayed beside the title in a web-browser -->
+  <link rel="icon" type="image/png" href="../assets/mindscape-fevicon.png" />
+  <!-- This is the link to import font Barlow  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" />
+  <!-- This is the link to import font Mint Grotesk Trial Black Display  -->
+  <link rel="stylesheet"
+    href="https://db.onlinewebfonts.com/c/03371e2a981f44333e9e50507227419d?family=Mint+Grotesk+Trial+Black+Display"
+    type="text/css" />
+  <!-- This is the link to import font Quintessential  -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Quintessential&family=Satisfy&display=swap" />
+  <!-- Font import link to include Material Symbols Rounded, providing a collection of versatile symbols for design elements -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    h1 {
+      font-family: "Mint Grotesk Trial Black Display";
+      line-height: 1.5;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.05em;
+      font-weight: 400;
+      color: #555;
+      margin: 5vh 0;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      line-height: 1;
+      margin: 5vh 0;
+    }
+
+    a,
+    button {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      transition: all .3s;
+      line-height: 1;
+    }
+
+    a:focus,
+    a:active,
+    a:hover,
+    button:focus,
+    button:active,
+    button:hover,
+    a b.light-color:hover {
+      text-decoration: none;
+      color: lightgreen;
+    }
+
+    b {
+      font-weight: 500;
+      font-family: inherit;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+      color: var(--white);
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    button {
+      outline: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    /* ---------------------------------
+2. COMMONS FOR PAGE DESIGN
+--------------------------------- */
+
+    .center-text {
+      text-align: center;
+    }
+
+    .display-table {
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+
+    .display-table-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .full-height {
+      height: 100%;
+    }
+
+    .position-static {
+      position: static;
+    }
+
+    .font-white {
+      color: var(--white);
+    }
+
+
+    /* ---------------------------------
+3. MAIN SECTION
+--------------------------------- */
+
+    .main-area {
+      position: relative;
+      height: 100vh;
+      z-index: 1;
+      padding: 0 20px;
+      background-size: cover;
+      color: var(--white);
+    }
+
+    .main-area:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      opacity: .4;
+      background: var(--darkcolor1);
+    }
+
+    .main-area .width-control {
+      margin: 20px auto;
+      max-width: 500px;
+    }
+
+    .main-area .notify-btn {
+      padding: 13px 35px;
+      border-radius: 50px;
+      border: 2px solid lightgreen;
+      background-color: lightgreen;
+      color: var(--darkcolor1);
+    }
+
+    .main-area .notify-btn b {
+      color: var(--darkcolor1);
+    }
+
+    .main-area .notify-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(5px);
+    }
+
+    .main-area .notify-btn:hover b {
+      color: var(--white);
+
+    }
+
+    .main-area .social-btn {
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .main-area .social-btn>li>a {
+      margin: 0 10px;
+      padding-bottom: 7px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-area .social-btn>li>a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all .2s;
+      height: 2px;
+      background: limegreen;
+    }
+
+
+    .main-area .social-btn>li>a:hover:after {
+      transform: translateX(100%);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CONSTRUCTION PAGE CODE -->
+  <div class="main-area center-text" style="background-image:url(../assets/construction-bg-image.jpg);">
+
+    <div class="display-table">
+      <div class="display-table-cell">
+
+        <h1 class="title font-white" style="margin-bottom: 5vh;"><b>Coming Soon . . .</b></h1>
+        <p class="barlow-regular width-control font-white">Our website is currently under development, but we'll be
+          launching soon.
+          We Should be back shortly. Thank you for your patience.
+          <br><br>
+          STAY TUNED FOR UPDATES!
+        </p>
+
+        <a class="notify-btn" href="mailto:u2512658@uel.ac.uk" style="margin: 5vh 0;"><b>NOTIFY US</b></a>
+
+        <ul class="social-btn font-white">
+
+          <li><a class="barlow-regular" href="https://twitter.com">Twitter</a></li>
+          <li><a class="barlow-regular" href="https://linkedin.com">LinkedIn</a></li>
+          <li><a class="barlow-regular" href="https://instagram.com">Instagram</a></li>
+          <li><a class="barlow-regular" href="https://ticktock.com">Ticktock</a></li>
+          <li><a class="barlow-regular" href="https://youtube.com">Youtube</a></li>
+        </ul><!-- social-btn -->
+
+      </div><!-- display-table -->
+    </div><!-- display-table-cell -->
+  </div><!-- main-area -->
+</body>
+
 </html>
