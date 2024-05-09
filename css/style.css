@@ -291,7 +291,7 @@ b.page-1-quote {
   width: 45svw;
   margin: 0 0 3vh 2vw;
   height: calc(100svh - 5vh - 3.5vw);
-  background-image: url(/MindScape-Documents/Pics/pexels-gustavo-fring-3985232.jpg);
+  background-image: url(../assets/index-page-1-image-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -393,7 +393,7 @@ b.page-1-quote {
   min-width: calc(100svw - 2.5rem - 10vw);
   height: clamp(60vh, 70vh, 90svh);
   padding: 5vh 2rem;
-  background-image: url(/MindScape-Documents/Pics/claudia-raya-liJGb5bsVQU-unsplash.jpg);
+  background-image: url(../assets/index-page-2-image-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -476,9 +476,11 @@ b.page-2-quote {
   justify-content: space-between;
 }
 .page3-hero-text {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 50svw;
+  min-height: 75svh;
   max-height: 90svh;
   margin: 0 0 3vh 2vw;
 }
@@ -487,7 +489,7 @@ b.page-2-quote {
   margin: 0 2vw 3vh 0;
   height: calc(90svh - 5vh - 3.5vw);
   border-radius: 50px;
-  background-image: url(/MindScape-Documents/Pics/pexels-panditwiguna-1128317.jpg);
+  background-image: url(../assets/index-page-3-image-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -592,7 +594,7 @@ th.table-column-empty {
 .page5-hero-image {
   width: clamp(90vw, 90vw, 90vw);
   height: clamp(90vh, 90vh, 90vh);
-  background-image: url(/MindScape-Documents/Pics/artur-aldyrkhanov-3bwMp-TyxOE-unsplash.jpg);
+  background-image: url(../assets/index-page-5-image-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -676,16 +678,13 @@ th.table-column-empty {
   padding: 2.5rem;
   align-items: center;
   justify-content: flex-start;
-  background-image: url(/MindScape-Documents/Pics/larm-rmah-AEaTUnvneik-unsplash.jpg);
+  background-image: url(../assets/index-page-6-grid-image-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 1rem;
   border: 1.5px solid var(--darkcolor1);
   transition: all 0.5s ease-in-out;
-}
-.grid-image:hover {
-  background-size: calc(100vw);
 }
 .grid-image:hover,
 .grid-squares:hover {
@@ -774,7 +773,7 @@ footer {
   aspect-ratio: 16/9;
   padding: 1rem;
   margin-top: 0.75rem;
-  background-image: url(/MindScape-Documents/Pics/pexels-polesietoys-18990772.jpg);
+  background-image: url(../assets/footer-image.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
