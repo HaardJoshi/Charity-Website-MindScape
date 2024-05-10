@@ -1,0 +1,248 @@
+/* ###################################
+      ----- TOP-NAVIGATION BAR -----
+################################### */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3.5vw;
+  padding: 3vh 5vw 2vh 5vw;
+  background-color: rgba(246, 245, 245, 0.4);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
+
+nav .logo {
+  /* width: 22.5rem; add js to change this to 18.75 when scrolled down to 75% of page-1 */
+  width: 22.8175vw;
+  margin-right: auto;
+  cursor: pointer;
+  top: 0;
+}
+nav ul li a {
+  /* padding: 0.3125rem 0.625rem; */
+  padding: 0.35vw 0.69vw;
+}
+/* changing the list style from column to row by using inline property */
+.nav-links li {
+  display: inline-block;
+  /* padding: 0 1.25rem; add js to change this to 0.75 when scrolled down to 75% of page-1 */
+  padding: 1.37875vw;
+}
+.nav-links li a {
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+.nav-btn {
+  font-size: 1.02rem;
+  /* font-size: 1.125vw; */
+  color: var(--darkcolor1);
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition: all ease-in-out 300ms;
+}
+.nav-btn::after {
+  content: "";
+  bottom: -0.3125rem;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 0.125rem;
+  border-radius: 50px;
+  background-color: var(--accentcolor3);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+}
+.nav-btn:focus,
+.nav-btn:hover {
+  color: var(--darkcolor1);
+  transform: translateY(-0.1875rem);
+  scale: 1.035;
+}
+
+.nav-btn:focus::after,
+.nav-btn:hover::after {
+  width: 100%;
+  left: 0%;
+}
+
+/* setting the donation button properties to highlight it on the page */
+.donate-btn {
+  /* font-size: 1.02rem; */
+  font-size: 1.125vw;
+  /* padding: 0.6875rem 1.875rem; */
+  padding: 0.7485vw 2.07vw;
+  margin-left: 1.25rem; /*setting a margin to the left of button to maintain the total space of 2.5rem between the nav-links and button */
+  color: var(--darkcolor1);
+  background-color: var(--accentcolor3);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.donate-btn:hover,
+.donate-btn:focus {
+  color: var(--accentcolor3);
+  background-color: var(--accentcolor1);
+}
+.donate-border {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.donate-border::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  border-radius: 50px;
+  z-index: -1;
+  margin-left: 1.25rem;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.donate-border:hover::before,
+.donate-border:focus::before {
+  top: -0.3125rem;
+  left: -0.3125rem;
+  right: -0.3125rem;
+  bottom: -0.3125rem;
+  border: 1px solid var(--accentcolor1);
+}
+
+/* ########################################
+      ----- BOTTOM-NAVIGATION BAR -----
+######################################## */
+
+/* Styling the bottom navidation which will appper only on the small screen devices. */
+nav.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  min-height: 3.5vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 101;
+  bottom: 0;
+  left: 0;
+  display: none;
+  border-radius: 50px;
+  transform: translateY(92vh);
+}
+.nav-bottom {
+  display: none;
+  width: 95%;
+  height: auto;
+
+  overflow-x: auto;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+i.material-symbols-rounded {
+  color: lightgreen;
+}
+
+/* Styling the links of the bottom navigation bar. */
+.nav-bottom a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.2rem; /* This is to add whitespace so that the nav bar will not overlap with the bottom contents. */
+}
+
+.nav-bottom a span {
+  margin: 0.5rem 0.2rem;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 0.85rem;
+}
+.nav-bottom a span:active {
+  text-decoration: underline;
+}
+
+/* ###################################
+    ----- MEDIA-QUERIES -----
+################################### */
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+  nav {
+    height: auto;
+    max-height: 2.5vh;
+    padding: 1.5rem 5vw; /* Adjust padding as needed */
+    align-items: center;
+  }
+
+  nav .logo {
+    width: 12rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide top navigation links on tablets */
+  }
+
+  .logo {
+    margin-right: 0; /* Reset margin for logo */
+  }
+
+  .donate-btn {
+    font-size: 1rem;
+    padding: 0.6875rem 1.875rem;
+  }
+
+  nav.bottom {
+    display: flex;
+  }
+  .nav-bottom {
+    display: flex; /* Hide bottom navigation on tablets */
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  nav {
+    height: auto;
+    max-height: 2.5vh;
+    padding: 1rem 5vw;
+    align-items: center;
+  }
+
+  nav .logo {
+    width: 8rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide top navigation links on mobile devices */
+  }
+
+  .logo {
+    margin-right: 0; /* Reset margin for logo */
+  }
+
+  .donate-btn {
+    font-size: 0.75rem;
+    padding: 0.6875rem 1.875rem;
+  }
+
+  .nav-bottom {
+    display: flex; /* Display bottom navigation on mobile devices */
+  }
+}

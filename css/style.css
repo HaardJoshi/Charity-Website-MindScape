@@ -1,0 +1,1110 @@
+/* ###################################
+      ----- DECLARING PRESETS -----
+################################### */
+
+/* Declaring custom variables for color scheme */
+:root {
+  --bgcolor: #f6f5f5;
+  --accentcolor1: #3a4b40;
+  --accentcolor2: #4d595c;
+  --accentcolor3: #a0aea5;
+  --darkcolor1: #333;
+  --white: #fff;
+  background-color: var(--bgcolor); /* Setting background color */
+}
+/* Setting default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+  color: var(--darkcolor1); /* Setting default text color */
+}
+/* Styling links */
+a {
+  text-decoration: none; /* Removing underline */
+  color: var(--darkcolor1); /* Setting link color */
+}
+/* ##############################
+      ----- FONTS -----
+############################## */
+
+/* Styling heading elements */
+
+h1 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h6 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Styling paragraph elements */
+
+p {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+/* declaring font classes in advance to remove the need to style font later-on */
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ##############################
+      ----- BUTTONS -----
+############################## */
+
+/* styling two-contast buttons to keep all the buttons similar */
+
+/* code for button on light background  */
+
+.button-1 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 0.975rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.46875rem 0 0.46875rem 0.46875rem;
+  color: var(--accentcolor1);
+  background-color: var(--accentcolor3);
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out 0.1s;
+  z-index: 1;
+}
+
+.button-1:hover {
+  color: var(--white);
+  border: 2px solid var(--darkcolor1);
+  background-color: var(--darkcolor1);
+}
+
+/* code for button on dark background  */
+
+.button-2 {
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 0.975rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.46875rem 0 0.46875rem 0.46875rem;
+  color: var(--darkcolor1);
+  background-color: var(--bgcolor);
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out 0.1s;
+  z-index: 1;
+}
+
+.button-2:hover {
+  color: var(--accentcolor1);
+  border: 2px solid var(--accentcolor3);
+  background-color: var(--accentcolor3);
+}
+
+.button-border,
+.button-border2 {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.625rem;
+  z-index: 0;
+}
+
+.button-border::before,
+.button-border2::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: 0;
+  transition: 0.2s ease-in-out 0.1s;
+}
+
+.button-border:hover::before,
+.button-border:focus::before {
+  animation: button-border-animation 250ms ease-in-out 250ms 1 both; /*shorthand for animation: name, duration, timing-function, delay, iteration-count, fill-mode*/
+}
+
+.button-border2:hover::before,
+.button-border2:focus::before {
+  animation: button-border-animation2 250ms ease-in-out 250ms 1 both;
+}
+
+/* keyframes code to define border animation used with the buttons */
+
+/* button-1 animation */
+
+@keyframes button-border-animation {
+  0% {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  25% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  50% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: 1px solid var(--darkcolor1);
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  75% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: 1px solid var(--darkcolor1);
+    border-bottom: 1px solid var(--darkcolor1);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  100% {
+    border-top: 1px solid var(--darkcolor1);
+    border-left: 1px solid var(--darkcolor1);
+    border-bottom: 1px solid var(--darkcolor1);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+}
+
+/* button-2 animation */
+
+@keyframes button-border-animation2 {
+  0% {
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  25% {
+    border-top: 1px solid var(--white);
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  50% {
+    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--white);
+    border-bottom: none;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  75% {
+    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+  100% {
+    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+  }
+}
+
+/* code for button on grid used in home page */
+
+.button-grid {
+  width: clamp(5.25rem, 7.25rem, 8.5rem);
+  aspect-ratio: 24/5;
+  padding: 2px 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 50px;
+  color: var(--white);
+  font-family: "Mint Grotesk Trial Black Display";
+}
+
+.button-grid:hover {
+  color: var(--darkcolor1);
+  background-color: var(--white);
+}
+
+/* ##############################
+      ----- EFFECTS -----
+############################## */
+
+/* this will give tint effect to background image so that the overlaying text is clearly visible  */
+
+.tint {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+
+/* ##############################
+      ----- PAGE-1 -----
+############################## */
+
+/* code for divs and elements used on sub-page-1 */
+
+#page1 {
+  width: clamp(100svw, 100svw, 100svw);
+  height: calc(100svh - 5vh - 3.5vw);
+  background-color: var(--bgcolor);
+  margin: 0 0 5vh 0;
+}
+
+header {
+  display: flex;
+  height: calc(100svh - 5vh - 3.5vw);
+  justify-content: space-between;
+}
+
+.hero-quote {
+  display: inline-flex;
+  flex-direction: column;
+  width: 45svw;
+  height: calc(100svh - 5vh - 3.5vw);
+  margin: 0 2vw 3vh 5vw;
+  padding-top: 10vh;
+}
+
+b.page-1-quote {
+  background-color: palegreen;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+.hero-img {
+  width: 45svw;
+  margin: 0 0 3vh 2vw;
+  height: calc(100svh - 5vh - 3.5vw);
+  background-image: url(../assets/index-page-1-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-links {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.hero-btn {
+  font-size: 1.25rem;
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 0.975rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-width: 5rem;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.625rem 1rem;
+  color: var(--accentcolor1);
+  background-color: transparent;
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0.1s;
+  z-index: 1;
+}
+
+.hero-btn2 {
+  font-size: 1.25rem;
+  font-family: "Mint Grotesk Trial Black Display";
+  font-size: 0.975rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-width: 5rem;
+  padding: 0.6875rem 1.875rem;
+  margin: 0.625rem 1rem;
+  color: var(--white);
+  background-color: var(--accentcolor1);
+  border: 2px solid var(--accentcolor1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0.1s;
+  z-index: 1;
+}
+
+.hero-btn span {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50px;
+  background-color: var(--accentcolor1);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0.2s;
+}
+
+.hero-btn2 span {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50px;
+  background-color: var(--darkcolor1);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0.2s;
+}
+
+.hero-btn:hover {
+  color: var(--bgcolor);
+  background-color: transparent;
+  border: 2px solid;
+  border-color: rgba(58, 75, 64, 0);
+}
+
+.hero-btn2:hover {
+  color: lightgreen;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: rgba(58, 75, 64, 0);
+}
+
+.hero-btn:hover span,
+.hero-btn2:hover span {
+  width: 100%;
+}
+
+/* ##############################
+      ----- PAGE-2 -----
+############################## */
+
+/* code for divs and elements used on sub-page-2 */
+
+#page2 {
+  display: flex;
+  width: clamp(100svw, 100svw, 100svw);
+  height: clamp(100svh, 100svh, 100svh);
+  margin: 2vh 0 5vh 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.page2-hero-image {
+  min-width: calc(100svw - 2.5rem - 10vw);
+  height: clamp(60vh, 70vh, 90svh);
+  padding: 5vh 2rem;
+  background-image: url(../assets/index-page-2-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+}
+
+.page2-hero-text {
+  max-width: 70svw;
+  max-height: 90svh;
+}
+b.page-2-quote {
+  background-color: palegreen;
+  font-family: "Satisfy", cursive;
+  font-size: 3.15rem;
+  font-weight: 400;
+}
+
+/* ##############################
+      ----- PARTNERS-LIST -----
+############################## */
+
+/* code for divs and elements used for infobar */
+
+#infobar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: clamp(90svw, 90svw, 900svw);
+  height: 35svh;
+  margin: 2vh 5vw 5vh 5vw;
+}
+
+.partners-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 0.625rem;
+  width: 100svw;
+  height: 15svh;
+  border: 1px solid var(--accentcolor2);
+  border-left: none;
+  border-radius: 0 100px 100px 0;
+}
+
+.partners-bar h5 {
+  margin-right: auto;
+}
+
+.partners-bar table {
+  width: auto;
+  border: none;
+}
+
+.partners-bar table td {
+  width: 10.885vw;
+  height: 12vh;
+  padding: 1.25rem;
+  align-content: center;
+}
+
+.partners-bar table td img {
+  display: inline-flex;
+  object-fit: contain;
+  aspect-ratio: 120/32;
+  max-width: 8.75rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.1, 0.1);
+}
+
+.partners-bar td a img:hover {
+  scale: 1.25;
+}
+
+/* ##############################
+      ----- PAGE-3 -----
+############################## */
+
+/* code for divs and elements used on sub-page-3 */
+
+#page3 {
+  width: clamp(90svw, 90svw, 90svw);
+  height: clamp(100svh, 100svh, 100svh);
+  margin: 2vh 5vw 5vh 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page3-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 50svw;
+  min-height: 75svh;
+  max-height: 90svh;
+  margin: 0 0 3vh 2vw;
+}
+
+.page3-hero-image {
+  width: 35svw;
+  margin: 0 2vw 3vh 0;
+  height: calc(90svh - 5vh - 3.5vw);
+  border-radius: 50px;
+  background-image: url(../assets/index-page-3-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0.6rem #000000;
+}
+
+/* ##############################
+      ----- PAGE-4 -----
+############################## */
+
+/* code for divs and elements used on sub-page-4 */
+
+#page4 {
+  width: clamp(100sw, 100sw, 100sw);
+  height: clamp(100svh, 120svh, 120svh);
+  margin: 2vw 0 5vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title-box {
+  width: clamp(47rem, 90vw, 90svw);
+  text-align: center;
+  margin: 5rem 0 2.5rem 0;
+}
+
+.comparision-chart {
+  overflow-x: auto;
+  width: clamp(64.2rem, 90vw, 100svw);
+  margin: 2vw 5vw;
+  display: flex;
+  justify-content: center;
+}
+
+.comparision-chart table {
+  border-collapse: collapse;
+}
+
+.table-column-1 {
+  width: clamp(1.5rem, 5vw, 5vw);
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--accentcolor3);
+}
+
+.table-column-2 {
+  width: clamp(21.875rem, 25vw, 30vw);
+  padding: 1rem 1rem 1rem 0;
+  text-align: left;
+  background-color: var(--accentcolor3);
+}
+
+.table-column-3 {
+  width: clamp(21.875rem, 50vw, 50vw);
+  padding: 1rem;
+  color: var(--white);
+  text-align: left;
+  background-color: var(--accentcolor1);
+}
+
+.comparision-chart table .table-column-empty {
+  padding: 0;
+  width: clamp(1rem, 1.5rem, 2vw);
+  background-color: var(--bgcolor);
+}
+
+.comparision-chart table th {
+  font-size: 1.5rem;
+  font-family: "Mint Grotesk Trial Black Display";
+  max-height: 5rem;
+}
+
+.comparision-chart table td {
+  max-width: 37rem;
+  height: clamp(1rem, 3.25rem, 4.375rem);
+  font-size: 1.125rem;
+}
+
+td.table-column-1 {
+  border-top: 1px solid var(--accentcolor2);
+}
+
+td.table-column-2 {
+  padding-right: 4rem;
+  border-top: 1px solid var(--accentcolor2);
+}
+
+td.table-column-3 {
+  padding-right: 4rem;
+  border-top: 1px solid var(--accentcolor2);
+}
+
+td.table-column-empty {
+  border-top: 1px solid var(--accentcolor2);
+}
+
+th.table-column-1,
+th.table-column-2,
+th.table-column-3,
+th.table-column-empty {
+  padding: 2.5rem 1rem;
+}
+
+/* ##############################
+      ----- PAGE-5 -----
+############################## */
+
+/* code for divs and elements used on sub-page-5 */
+
+#page5 {
+  display: flex;
+  width: clamp(100svw, 100svw, 100svw);
+  height: clamp(100svh, 100svh, 100svh);
+  margin: 2vh 0 5vh 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.page5-hero-image {
+  width: clamp(90vw, 90vw, 90vw);
+  height: clamp(90vh, 90vh, 90vh);
+  background-image: url(../assets/index-page-5-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.top-textbox p,
+.bottom-textbox p {
+  max-width: 40svw;
+  color: var(--white);
+}
+
+.top-textbox {
+  margin: 5vh 5vw;
+  padding: 5vh 5vw;
+}
+
+.bottom-textbox {
+  margin: 5vh 5vw;
+  padding: 5vh 5vw;
+  min-height: 25vh;
+}
+
+/* ##############################
+      ----- ONE-LINER -----
+############################## */
+
+/* code for divs and elements used for one-liner div */
+
+#one-liner {
+  display: flex;
+  flex-direction: row;
+  width: clamp(85.97svw, 86svw, 90svw);
+  height: clamp(10svh, 10svh, 10svh);
+  margin: 2vh 5vw 5vh 5vw;
+  padding: 0 2vw;
+  background-color: var(--darkcolor1);
+  align-items: center;
+  border-radius: 100px;
+}
+
+#one-liner .button-border2 {
+  right: calc(5vw + 1rem);
+}
+
+/* ##############################
+      ----- PAGE-6 -----
+############################## */
+
+/* code for divs and elements used on sub-page-6 */
+
+#page6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: clamp(100svw, 100svw, 100svw);
+  height: clamp(120svh, 140svh, 150svh);
+  margin: 5vh 0 0 0;
+  background-color: #1a1a1a;
+  align-items: center;
+}
+
+.page6-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 90svw;
+  height: clamp(35svh, 35svh, 35svh);
+  margin: 12vh 0 10vh 0;
+  padding: 0 5vw;
+}
+
+.page6-body-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 90vw;
+  height: 90vw;
+  margin-bottom: 10vh;
+  inset: 1rem 0;
+}
+
+.grid-image {
+  grid-area: 1 / 1 / 2 / 4;
+  display: flex;
+  padding: 2.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(../assets/index-page-6-grid-image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  border: 1.5px solid var(--darkcolor1);
+  transition: all 0.5s ease-in-out;
+}
+
+.grid-image:hover,
+.grid-squares:hover {
+  border: 1.5px solid var(--white);
+  box-shadow: 0 0 0.6rem var(--white);
+}
+
+.grid-image-text h4,
+.grid-image-text p,
+.grid-squares h4,
+.grid-squares p {
+  color: var(--white);
+}
+
+#grid-square-1 {
+  grid-area: 2/1/3/2;
+}
+
+#grid-square-2 {
+  grid-area: 2/1/3/3;
+}
+
+#grid-square-3 {
+  grid-area: 2/1/3/4;
+}
+
+.grid-squares {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 1rem;
+  border: 1.5px solid var(--darkcolor1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* ##############################
+      ----- FOOTER -----
+############################## */
+
+/* code for divs and elements used in footer of the website */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: clamp(100svw, 100svw, 100svw);
+  height: clamp(60svh, 60svh, 60svh);
+  bottom: 0;
+  position: relative;
+}
+
+.footer-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-waves svg {
+  position: relative;
+  display: block;
+  width: 100svw;
+  height: 15vh;
+}
+
+.footer-waves .shape-fill {
+  fill: #b8e986;
+}
+
+.headnote {
+  max-width: 90svw;
+  min-height: 30svh;
+  padding: 1rem 5vw;
+  margin: 15vh 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headnote-left {
+  display: flex;
+  flex-direction: column;
+  max-width: min(28rem, 40vw);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.headnote-left img {
+  width: 20rem;
+}
+
+.headnote-zoom-image {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 33.59vw;
+  aspect-ratio: 16/9;
+  padding: 1rem;
+  margin-top: 0.75rem;
+  background-image: url(../assets/footer-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.headnote-right {
+  display: flex;
+  flex-direction: row;
+  min-width: min(45rem, 50vw);
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+table.follow-us {
+  width: calc(min(45rem, 50vw) - 86.16px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  object-fit: fill;
+}
+
+td.follow-us {
+  display: inline-flex;
+  position: relative;
+  min-width: 2rem;
+  aspect-ratio: 1;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border: 1px solid var(--accentcolor2);
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f0f7f0;
+}
+
+td.follow-us a {
+  min-width: 3.2rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+td.follow-us a img {
+  filter: contrast(20%);
+}
+
+td.follow-us:hover {
+  background-color: var(--darkcolor1);
+}
+
+td.follow-us:hover img {
+  filter: contrast(100%);
+}
+
+span.follow-us {
+  content: "";
+  color: var(--darkcolor1);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  position: absolute;
+  transform: translate(1.8125rem, 3.75rem);
+  width: clamp(3rem, 5rem, 7rem);
+  height: clamp(1.15rem, 1.25rem, 4rem);
+  background-color: #f0f7f0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0.6rem rgb(0, 0, 0);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+td.follow-us:hover span.follow-us,
+td.follow-us:focus span.follow-us {
+  opacity: 1;
+}
+
+.footnote {
+  max-width: 90svw;
+  height: 8svh;
+  text-align: center;
+  justify-items: center;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Tablet Styles */
+
+@media only screen and (max-width: 768px) {
+  /* Footer */
+  footer {
+    height: min-content; /* Adjusted height for tablet screens */
+    padding: 10px 0; /* Adjusted padding for tablet screens */
+  }
+
+  .footer-waves {
+    margin-bottom: 3rem; /* Adjusted margin-top to create space for logo */
+  }
+
+  .footer-waves svg {
+    height: 8vh; /* reducing the height for better visual appeal */
+  }
+
+  .headnote {
+    margin: 10vh 0 0 0; /* Adjusted margin for tablet screens */
+    flex-direction: column; /* Adjusted flex-direction for tablet screens */
+    align-items: center; /* Adjusted alignment for tablet screens */
+  }
+
+  .headnote-left {
+    max-width: 90%; /* Adjusted max-width for tablet screens */
+    margin-bottom: 2rem; /* Adjusted margin for tablet screens */
+  }
+
+  .headnote-left img {
+    width: 100%; /* Adjusted width for tablet screens */
+  }
+
+  .headnote-zoom-image {
+    width: 90%; /* Adjusted width for tablet screens */
+    margin-top: 1.5rem; /* Adjusted margin for tablet screens */
+  }
+
+  .headnote-right {
+    min-width: 90%; /* Adjusted min-width for tablet screens */
+    margin-top: 2rem; /* Adjusted margin for tablet screens */
+  }
+
+  table.follow-us {
+    width: 90%; /* Adjusted width for tablet screens */
+  }
+
+  td.follow-us {
+    min-width: 3rem; /* Adjusted min-width for tablet screens */
+    padding: 0.5rem; /* Adjusted padding for tablet screens */
+    margin: 1rem 0.5rem; /* Adjusted margin for tablet screens */
+  }
+
+  td.follow-us a {
+    min-width: 3rem; /* Adjusted min-width for tablet screens */
+  }
+
+  span.follow-us {
+    transform: translate(
+      1.5rem,
+      4rem
+    ); /* Adjusted transformation for tablet screens */
+  }
+
+  .footnote {
+    padding: 0 5vw; /* Adjusted padding for tablet screens */
+  }
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 480px) {
+  /* Footer */
+  footer {
+    height: auto; /* Adjusted height for mobile screens */
+  }
+
+  .footer-waves {
+    margin-bottom: 2rem; /* Adjusted margin-top to create space for logo */
+  }
+
+  .footer-waves svg {
+    height: 8vh; /* reducing the height for better visual appeal */
+  }
+
+  .headnote {
+    margin: 5vh 0 0 0; /* Adjusted margin for mobile screens */
+  }
+
+  .headnote-left {
+    max-width: 90%; /* Adjusted max-width for mobile screens */
+    margin-bottom: 1rem; /* Adjusted margin for mobile screens */
+  }
+
+  .headnote-zoom-image {
+    width: 90%; /* Adjusted width for mobile screens */
+    margin-top: 1rem; /* Adjusted margin for mobile screens */
+  }
+
+  .headnote-right {
+    min-width: 90%; /* Adjusted min-width for mobile screens */
+    margin-top: 1rem; /* Adjusted margin for mobile screens */
+  }
+
+  table.follow-us {
+    width: 90%; /* Adjusted width for mobile screens */
+  }
+
+  td.follow-us {
+    min-width: 2.5rem; /* Adjusted min-width for mobile screens */
+    padding: 0.5rem; /* Adjusted padding for mobile screens */
+    margin: 0.5rem; /* Adjusted margin for mobile screens */
+  }
+
+  span.follow-us {
+    transform: translate(
+      1.5rem,
+      3rem
+    ); /* Adjusted transformation for mobile screens */
+  }
+
+  .footnote {
+    padding: 0 5vw; /* Adjusted padding for mobile screens */
+  }
+}
+
+/* ----- ##################################################
+      Copyright 2024 Hard Joshi. Subject to the MIT license. 
+################################################## ----- */

@@ -1,0 +1,177 @@
+/* ##############################
+      ----- PAGE-1 -----
+############################## */
+
+/* ---------------------------------------------------
+CSS for Page 1 of the story section.
+  Defines styles for the introductory page.
+--------------------------------------------------- */
+
+/* Container for the entire content of Page 1 */
+
+#story-page1 {
+  width: clamp(100svw, 100svw, 100svw);
+  margin: 0 0 5vh 0;
+}
+
+/* ---------------------------------------------------
+Hero image at the top of the page
+--------------------------------------------------- */
+
+.story-hero-image {
+  width: 100svw;
+  margin: 2vh 0;
+  height: calc(70svh - 5vh - 3.5vw);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1rem var(--darkcolor1);
+}
+
+/* Header section */
+
+.story-header {
+  width: clamp(90svw, 90svw, 90svw);
+  margin: 2vh 5vw 7vh 5vw;
+}
+
+.story-icon-line {
+  display: flex;
+  align-items: center;
+}
+
+.story-icon-line p {
+  font-size: 1.2rem;
+}
+
+.story-header hr {
+  border: none;
+  border-top: 0.15rem solid var(--darkcolor1);
+  height: 0;
+}
+
+.story-paragraph {
+  margin-bottom: 7vh;
+}
+
+.story-paragraph p {
+  font-size: 1.35rem;
+  text-align: justify;
+}
+
+.story-paragraph b {
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+}
+
+.story-quote {
+  width: clamp(90svw, 90svw, 90svw);
+  min-height: 25vh;
+  background-color: var(--accentcolor1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-quote blockquote {
+  color: var(--white);
+  font-size: 2rem;
+  padding: 5rem;
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 768px) {
+  /* Container for the entire content of Page 1 */
+  #story-page1 {
+    width: clamp(90vw, 90vw, 90vw); /* Adjusted width for tablet screens */
+    margin: 0 0 3vh 0; /* Adjusted margin for spacing */
+  }
+
+  /* Hero image at the top of the page */
+  .story-hero-image {
+    width: 100vw; /* Full width */
+    margin: 2vh 0; /* Top and bottom margin */
+    height: calc(50vh - 5vh - 3.5vw); /* Adjusted height for tablet screens */
+  }
+
+  /* Header section */
+  .story-header {
+    width: clamp(80vw, 80vw, 80vw); /* Adjusted width for tablet screens */
+    margin: 2vh 5vw 5vh 5vw; /* Adjusted margin for spacing */
+  }
+
+  /* Paragraph section */
+  .story-paragraph {
+    margin-bottom: 5vh; /* Adjusted bottom margin for spacing */
+  }
+
+  .story-paragraph p {
+    font-size: 1.2rem; /* Adjusted font size for tablet screens */
+  }
+
+  .story-paragraph b {
+    font-size: 1.3rem; /* Adjusted font size for tablet screens */
+  }
+
+  /* Quote section */
+  .story-quote {
+    width: clamp(80vw, 80vw, 80vw); /* Adjusted width for tablet screens */
+    min-height: 20vh; /* Adjusted minimum height for tablet screens */
+  }
+
+  .story-quote blockquote {
+    font-size: 1.5rem; /* Adjusted font size for tablet screens */
+    padding: 3rem; /* Adjusted padding for tablet screens */
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+  /* Container for the entire content of Page 1 */
+  #story-page1 {
+    width: clamp(95vw, 95vw, 95vw); /* Adjusted width for mobile screens */
+    margin: 0 0 2vh 0; /* Adjusted margin for spacing */
+  }
+
+  /* Hero image at the top of the page */
+  .story-hero-image {
+    width: 100vw; /* Full width */
+    margin: 2vh 0; /* Top and bottom margin */
+    height: calc(40vh - 5vh - 3.5vw); /* Adjusted height for mobile screens */
+  }
+
+  /* Header section */
+  .story-header {
+    width: clamp(85vw, 85vw, 85vw); /* Adjusted width for mobile screens */
+    margin: 2vh 3vw 3vh 3vw; /* Adjusted margin for spacing */
+  }
+
+  /* Paragraph section */
+  .story-paragraph {
+    margin-bottom: 3vh; /* Adjusted bottom margin for spacing */
+  }
+
+  .story-paragraph p {
+    font-size: 1rem; /* Adjusted font size for mobile screens */
+  }
+
+  .story-paragraph b {
+    font-size: 1.2rem; /* Adjusted font size for mobile screens */
+  }
+
+  /* Quote section */
+  .story-quote {
+    width: clamp(85vw, 85vw, 85vw); /* Adjusted width for mobile screens */
+    min-height: 15vh; /* Adjusted minimum height for mobile screens */
+  }
+
+  .story-quote blockquote {
+    font-size: 1.2rem; /* Adjusted font size for mobile screens */
+    padding: 2rem; /* Adjusted padding for mobile screens */
+  }
+}
+
+/* ----- ##################################################
+      Copyright 2024 Hard Joshi. Subject to the MIT license. 
+################################################## ----- */
