@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MindScape-Nurturing Young Minds, Building Strong Futures!</title>
   <!-- This css sylesheet is used to style the home page and declare presets for the website to ensure uniformity -->
-  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <!-- This css sylesheet is used to style navbar -->
-  <link rel="stylesheet" type="text/css" href="../css/nav-style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/nav-style.css" />
   <!-- This image is the icon that is displayed beside the title in a web-browser -->
-  <link rel="icon" type="image/png" href="../assets/mindscape-fevicon.png" />
+  <link rel="icon" type="image/png" href="./assets/mindscape-fevicon.png" />
   <!-- This is the link to import font Barlow  -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" />
   <!-- This is the link to import font Mint Grotesk Trial Black Display  -->
@@ -24,6 +24,15 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
   <style>
+    /* ---------------------------------
+1. PRESETS FOR PAGE DESIGN
+--------------------------------- */
+    body,
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
     h1 {
       font-family: "Mint Grotesk Trial Black Display";
       line-height: 1.5;
@@ -97,25 +106,6 @@
       text-align: center;
     }
 
-    .display-table {
-      display: table;
-      height: 100%;
-      width: 100%;
-    }
-
-    .display-table-cell {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    .full-height {
-      height: 100%;
-    }
-
-    .position-static {
-      position: static;
-    }
-
     .font-white {
       color: var(--white);
     }
@@ -125,16 +115,20 @@
 3. MAIN SECTION
 --------------------------------- */
 
-    .main-area {
-      position: relative;
+    #construction-page-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       height: 100vh;
       z-index: 1;
       padding: 0 20px;
       background-size: cover;
       color: var(--white);
+      max-height: 100vh;
     }
 
-    .main-area:after {
+    #construction-page-1:after {
       content: '';
       position: absolute;
       top: 0;
@@ -146,12 +140,12 @@
       background: var(--darkcolor1);
     }
 
-    .main-area .width-control {
+    #construction-page-1 .width-control {
       margin: 20px auto;
       max-width: 500px;
     }
 
-    .main-area .notify-btn {
+    #construction-page-1 .notify-btn {
       padding: 13px 35px;
       border-radius: 50px;
       border: 2px solid lightgreen;
@@ -159,21 +153,21 @@
       color: var(--darkcolor1);
     }
 
-    .main-area .notify-btn b {
+    #construction-page-1 .notify-btn b {
       color: var(--darkcolor1);
     }
 
-    .main-area .notify-btn:hover {
+    #construction-page-1 .notify-btn:hover {
       background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(5px);
     }
 
-    .main-area .notify-btn:hover b {
+    #construction-page-1 .notify-btn:hover b {
       color: var(--white);
 
     }
 
-    .main-area .social-btn {
+    #construction-page-1 .social-btn {
       position: absolute;
       bottom: 40px;
       width: 100%;
@@ -181,14 +175,14 @@
       transform: translateX(-50%);
     }
 
-    .main-area .social-btn>li>a {
+    #construction-page-1 .social-btn>li>a {
       margin: 0 10px;
       padding-bottom: 7px;
       position: relative;
       overflow: hidden;
     }
 
-    .main-area .social-btn>li>a:after {
+    #construction-page-1 .social-btn>li>a:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -196,45 +190,101 @@
       right: 0;
       transition: all .2s;
       height: 2px;
-      background: limegreen;
+      background: palegreen;
     }
 
-
-    .main-area .social-btn>li>a:hover:after {
+    #construction-page-1 .social-btn>li>a:hover:after {
       transform: translateX(100%);
+    }
+
+    /* Common styles for tablet and mobile */
+
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+        /* Adjusted font size for smaller screens */
+      }
+
+      p {
+        font-size: 0.9em;
+        backdrop-filter: blur(2px);
+        /* Adjusted font size for smaller screens */
+      }
+
+      #construction-page-1 .width-control {
+        margin: 20px 0;
+        max-width: 100%;
+      }
+
+      #construction-page-1 {
+        padding: 0 10px;
+        /* Adjusted padding for smaller screens */
+      }
+
+      #construction-page-1 .notify-btn {
+        padding: 10px 25px;
+        /* Adjusted padding for smaller screens */
+      }
+
+      .social-btn {
+        bottom: 20px;
+        /* Adjusted bottom position for smaller screens */
+      }
+
+      .social-btn>li>a {
+        margin: 0 5px;
+        /* Adjusted margin for smaller screens */
+      }
+    }
+
+    /* Styles for mobile */
+    @media only screen and (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+        /* Further reduced font size for mobile screens */
+      }
+
+      #construction-page-1 {
+        justify-content: space-evenly;
+      }
+
+      #construction-page-1 .notify-btn {
+        padding: 8px 20px;
+        /* Further reduced padding for mobile screens */
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- CONSTRUCTION PAGE CODE -->
-  <div class="main-area center-text" style="background-image:url(../assets/construction-bg-image.jpg);">
 
-    <div class="display-table">
-      <div class="display-table-cell">
+  <div id="construction-page-1" class=" center-text" style="background-image:url(./assets/construction-bg-image.jpg);">
 
-        <h1 class="title font-white" style="margin-bottom: 5vh;"><b>Coming Soon . . .</b></h1>
-        <p class="barlow-regular width-control font-white">Our website is currently under development, but we'll be
-          launching soon.
-          We Should be back shortly. Thank you for your patience.
-          <br><br>
-          STAY TUNED FOR UPDATES!
-        </p>
+    <h1 class="title font-white" style="margin-bottom: 5vh;"><b>Coming Soon . . .</b></h1>
+    <p class="barlow-regular width-control font-white">Our website is currently under development, but we'll be
+      launching soon.
+      We Should be back shortly. Thank you for your patience.
+      <br><br>
+      STAY TUNED FOR UPDATES!
+      <br><br><br>
+      <a class="notify-btn" href="mailto:u2512658@uel.ac.uk" style="margin: 5vh 0;"><b>NOTIFY US</b></a>
+    </p>
 
-        <a class="notify-btn" href="mailto:u2512658@uel.ac.uk" style="margin: 5vh 0;"><b>NOTIFY US</b></a>
 
-        <ul class="social-btn font-white">
 
-          <li><a class="barlow-regular" href="https://twitter.com">Twitter</a></li>
-          <li><a class="barlow-regular" href="https://linkedin.com">LinkedIn</a></li>
-          <li><a class="barlow-regular" href="https://instagram.com">Instagram</a></li>
-          <li><a class="barlow-regular" href="https://ticktock.com">Ticktock</a></li>
-          <li><a class="barlow-regular" href="https://youtube.com">Youtube</a></li>
-        </ul><!-- social-btn -->
+    <ul class="social-btn font-white">
 
-      </div><!-- display-table -->
-    </div><!-- display-table-cell -->
+      <li><a class="barlow-regular" href="https://twitter.com">Twitter</a></li>
+      <li><a class="barlow-regular" href="https://linkedin.com">LinkedIn</a></li>
+      <li><a class="barlow-regular" href="https://instagram.com">Instagram</a></li>
+      <li><a class="barlow-regular" href="https://ticktock.com">Ticktock</a></li>
+      <li><a class="barlow-regular" href="https://youtube.com">Youtube</a></li>
+    </ul><!-- social-btn -->
   </div><!-- main-area -->
 </body>
 
 </html>
+
+<!----- ##################################################
+  Copyright 2024 Hard Joshi. Subject to the MIT license. 
+################################################## ----->
