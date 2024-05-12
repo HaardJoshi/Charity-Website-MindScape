@@ -206,6 +206,7 @@ a.about-us-button:hover {
 
   /* Styles for PAGE-2 */
   #about-us-page2 {
+    height: auto;
     padding: 5vh 5vw; /* Adjusted padding for smaller screens */
     flex-direction: column; /* Adjusted flex-direction for smaller screens */
     align-items: center; /* Adjusted alignment for smaller screens */
