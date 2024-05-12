@@ -569,7 +569,7 @@ b.page-2-quote {
 /* code for divs and elements used on sub-page-4 */
 
 #page4 {
-  width: clamp(100sw, 100sw, 100sw);
+  width: clamp(100svw, 100svw, 100svw);
   height: clamp(100svh, 120svh, 120svh);
   margin: 2vw 0 5vw 0;
   display: flex;
@@ -701,6 +701,10 @@ th.table-column-empty {
   padding: 5vh 5vw;
 }
 
+#page5 .top-textbox h1 {
+  font-size: 5rem;
+  color: var(--white);
+}
 .bottom-textbox {
   margin: 5vh 5vw;
   padding: 5vh 5vw;
@@ -763,7 +767,7 @@ th.table-column-empty {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   width: 90vw;
-  height: 90vw;
+  height: 90vh;
   margin-bottom: 10vh;
   inset: 1rem 0;
 }
@@ -980,10 +984,209 @@ td.follow-us:focus span.follow-us {
   justify-content: space-between;
 }
 
-/* Tablet Styles */
+/* ##############################
+        ----- MOBILE STYLES -----
+  ############################## */
 
 @media only screen and (max-width: 768px) {
-  /* Footer */
+  /* ---------------------------------
+1. SUB-PAGE-1 STYLES
+--------------------------------- */
+
+  #page1 {
+    height: auto;
+    margin-bottom: 2rem;
+    margin-top: calc(5vh + 3.5vw);
+  }
+
+  header {
+    flex-direction: column-reverse;
+  }
+
+  .hero-quote {
+    width: 90%;
+    margin: 0 auto 2rem;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero-links {
+    flex-direction: column;
+  }
+
+  .hero-btn,
+  .hero-btn2 {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  /* ---------------------------------
+2. SUB-PAGE-2 STYLES
+--------------------------------- */
+  #page2 {
+    width: 100%;
+    margin: 2vh 0 5% 0;
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .page2-hero-image {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 0;
+    height: auto;
+  }
+
+  .page2-hero-text {
+    width: 90%;
+    padding: 1.5rem;
+    text-align: left;
+    height: auto;
+  }
+
+  .page2-hero-text h3 {
+    font-size: 1.25rem;
+  }
+  b.page-2-quote {
+    font-size: 3rem;
+  }
+
+  /* ---------------------------------
+  3.  HIDING INFOBAR
+--------------------------------- */
+  #infobar {
+    display: none;
+  }
+
+  /* ---------------------------------
+4. SUB-PAGE-1 STYLES
+--------------------------------- */
+  #page3 {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .page3-hero-image {
+    width: 90%;
+    margin: 2rem 5vw;
+    min-height: 60%;
+    max-height: 60%;
+  }
+
+  .page3-hero-text {
+    max-width: 90%;
+    margin: 0 5vw;
+    text-align: left;
+  }
+
+  .page3-hero-text h3 {
+    font-size: 2.25rem;
+  }
+
+  #page3 .button-border {
+    transform: translateY(5vh);
+  }
+
+  /* ---------------------------------
+5. SUB-PAGE-4 STYLES
+--------------------------------- */
+  #page4 {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title-box,
+  .comparision-chart {
+    width: 90%;
+    margin: 5vh 5vw;
+    padding: 0;
+    height: auto;
+  }
+
+  .comparision-table {
+    overflow-y: scroll;
+  }
+  .comparision-chart table th {
+    font-size: 1.5rem;
+  }
+  .table-column-1,
+  .table-column-2,
+  .table-column-empty {
+    display: none;
+  }
+
+  /* ---------------------------------
+6. SUB-PAGE-5 STYLES
+--------------------------------- */
+  #page5 {
+    flex-direction: column;
+  }
+
+  .page5-hero-image {
+    width: 90%;
+    margin: 2rem auto;
+    height: auto;
+  }
+  .top-textbox {
+    margin: 5vh 5vw 0 5vw;
+    padding: 5vh 5vw 0 5vw;
+  }
+  #page5 .top-textbox h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5vh;
+  }
+
+  .page5-hero-text {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bottom-textbox {
+    padding: 0 5vw 5vh 5vw;
+  }
+  .bottom-textbox a {
+    transform: translateX(-15%);
+  }
+
+  /* ---------------------------------
+7. ONE-LINER STYLES
+--------------------------------- */
+  #one-liner {
+    width: 90%;
+    border-radius: 0;
+    text-align: center;
+    margin: 5vh 0 2vh 0;
+    padding: 0;
+    padding-left: 10%;
+  }
+
+  /* ---------------------------------
+8. SUB-PAGE-6 STYLES
+--------------------------------- */
+  #page6 {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .page6-hero-text {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .page6-body-grid {
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: scroll;
+  }
+  /* ---------------------------------
+9. FOOTER STLYES
+--------------------------------- */
   footer {
     height: min-content; /* Adjusted height for tablet screens */
     padding: 10px 0; /* Adjusted padding for tablet screens */
@@ -1048,10 +1251,12 @@ td.follow-us:focus span.follow-us {
   }
 }
 
-/* Mobile Styles */
+/* Mobile Styles for footer */
 
 @media only screen and (max-width: 480px) {
-  /* Footer */
+  /* ---------------------------------
+   FOOTER
+--------------------------------- */
   footer {
     height: auto; /* Adjusted height for mobile screens */
   }
