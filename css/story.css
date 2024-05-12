@@ -132,6 +132,7 @@ Hero image at the top of the page
   #story-page1 {
     width: clamp(95vw, 95vw, 95vw); /* Adjusted width for mobile screens */
     margin: 0 0 2vh 0; /* Adjusted margin for spacing */
+    padding-left: 5vw; /* Adjusted padding for visual appeal */
   }
 
   /* Hero image at the top of the page */
