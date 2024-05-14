@@ -1,5 +1,5 @@
 /* ###################################
-    ----- CODE FOR RESPONSIVE PAGES -----
+----- CODE FOR RESPONSIVE PAGES -----
 ################################### */
 // Function to check if the screen size is that of a mobile phone
 function isMobileScreen() {
@@ -24,3 +24,6 @@ window.addEventListener("resize", function () {
     redirectToConstructionPage();
   }
 });
+/* ------ ##################################################
+    Copyright 2024 Hard Joshi. Subject to the MIT license. 
+################################################## ------ */
