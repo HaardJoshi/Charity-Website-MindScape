@@ -64,3 +64,6 @@ donationForm.addEventListener("submit", (event) => {
     donationForm.submit();
   }
 });
+// ------ ##################################################
+//   Copyright 2024 Hard Joshi. Subject to the MIT license. 
+//################################################## ------
